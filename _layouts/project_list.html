@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section>
+	<header class="major">
+		<h2>Projects</h2>
+	</header>
+	<div class="posts">
+        {% for project in site.posts %}
+		<article>
+			<a href="#" class="image"><img src="{{ project.image }}" alt="" /></a>
+			<h3> {{project.title}}</h3>
+			<p>{{ project.subtitle }}</p>
+			<ul class="actions">
+				<li><a href="{{ project.url }}" class="button">More</a></li>
+			</ul>
+		</article>
+        {% endfor %}
+	</div>
+</section>

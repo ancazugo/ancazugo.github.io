@@ -3,10 +3,10 @@ title: Portfolio
 subtitle: by Andrés Zúñiga González
 email: ancazugo@hotmail.com
 description: A FREE AND FULLY RESPONSIVE SITE TEMPLATE
-baseurl: "/home" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
-# street_address: Colombia
+street_address: Bogotá
 # city: Nashville
 # state: TN
 # zip_code: 55555
@@ -14,15 +14,15 @@ country: Colombia
 phone: (+57) 318 869 26 15
 
 # Social settings
-500px_url: ancazugo.github.io
+# 500px_url: ancazugo.github.io
 facebook_url: https://facebook.com/ancazugo
-github_url:
+github_url: https://github.com/ancazugo
 # gitlab_url: https://gitlab.com/u/andrewbanchich
 # googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
 instagram_url: https://instagram.com/ancazugo
 linkedin_url: https://www.linkedin.com/in/ancazugo
-pinterest_url:
-slack_url:
+# pinterest_url:
+# slack_url:
 twitter_url: https://twitter.com/ancazugo
 
 # Build settings

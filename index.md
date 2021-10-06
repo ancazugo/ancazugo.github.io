@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Section -->
-<section>
+<!-- <section>
 	<header class="major">
 		<h2>Erat lacinia</h2>
 	</header>
@@ -37,10 +37,10 @@ layout: default
 			</div>
 		</article>
 	</div>
-</section>
+</section> -->
 
 <!-- Section -->
-<section>
+<!-- <section>
 	<header class="major">
 		<h2>Ipsum sed dolor</h2>
 	</header>
@@ -94,4 +94,4 @@ layout: default
 			</ul>
 		</article>
 	</div>
-</section>
+</section> -->
