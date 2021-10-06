@@ -9,7 +9,7 @@ layout: default
 	<div class="posts">
         {% for project in site.posts %}
 		<article>
-			<a href="#" class="image"><img src="{{ project.image }}" alt="" /></a>
+			<a href="{{ project.url }}" class="image"><img src="{{ project.image }}" alt="" /></a>
 			<h3> {{project.title}}</h3>
 			<p>{{ project.subtitle }}</p>
 			<ul class="actions">
