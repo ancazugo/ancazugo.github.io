@@ -2,7 +2,7 @@
 layout: "page"
 title: "Kenya Census"
 subtitle: "Using maps and multiples for census analysis"
-image: /images/projects/tidytuesday/kenya_census.png
+image: /assets/images/projects/tidytuesday/kenya_census.png
 date:   2021-01-31 20:26:08 -0500
 categories: r tidytuesday
 permalink: /:categories/:title.html

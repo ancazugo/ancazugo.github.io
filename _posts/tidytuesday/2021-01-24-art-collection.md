@@ -2,7 +2,7 @@
 layout: "page"
 title: "TATE Art Collection"
 subtitle: "Color analysis of the TATE Art Collection"
-image: /images/projects/tidytuesday/art_collection.png
+image: /assets/images/projects/tidytuesday/art_collection.png
 date:   2021-01-24 20:26:08 -0500
 categories: r tidytuesday
 permalink: /:categories/:title.html

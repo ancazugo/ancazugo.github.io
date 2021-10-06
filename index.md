@@ -1,6 +1,14 @@
 ---
-layout: default
+layout: generic
+title: Andrés is passionate about programming and its applications 
+image: assets/images/home.jpg
 ---
+
+Find more about my background, my projects and interests in this website.
+
+<ul class="actions">
+	<li><a href="/about" class="button big">Learn More</a></li>
+</ul>
 
 <!-- Section -->
 <!-- <section>
