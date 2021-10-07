@@ -4,6 +4,7 @@ title: "TATE Art Collection"
 subtitle: "Color analysis of the TATE Art Collection"
 image: /assets/images/projects/tidytuesday/art_collection.png
 date:   2021-01-24 20:26:08 -0500
+interactive: false
 categories: r tidytuesday
 permalink: /:categories/:title.html
 ---

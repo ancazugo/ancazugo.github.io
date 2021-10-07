@@ -4,6 +4,7 @@ title: "Transit Cost Project"
 subtitle: "Using ggbump and ggflags for ranking analysis"
 image: /assets/images/projects/tidytuesday/transit_cost_project.png
 date:   2021-01-17 20:26:08 -0500
+interactive: false
 categories: r tidytuesday
 permalink: /:categories/:title.html
 ---
