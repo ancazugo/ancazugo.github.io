@@ -1,7 +1,7 @@
 ---
 layout: "page"
 title: "Colombian Biodiversity Dashboard"
-subtitle: "Visualization of the results of the nationwide exam for teenagers in Colombia"
+subtitle: "An interactive dashboard to measure Colombian biodiversity"
 image: /assets/images/projects/observable/biodiversity_dashboard.png
 date: 2019-12-06
 interactive: false
