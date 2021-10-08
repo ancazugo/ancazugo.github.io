@@ -1,14 +1,17 @@
 ---
 layout: "page"
 title: "Kenya Census"
-subtitle: "Using maps and multiples for census analysis"
+subtitle: "Using maps and small multiples for census analysis"
 image: /assets/images/projects/tidytuesday/kenya_census.png
-date:   2021-01-31 20:26:08 -0500
+date: 2021-01-31
 interactive: false
 categories: r tidytuesday
 permalink: /:categories/:title.html
 ---
 
+As a big fan of maps, I really wanted to make a great viz in this third entry of TidyTuesday so I used small multiples to represent household reliance on several types of plants animals as sources of food in Kenya. This is also the first time I use the patchwork package, which is amazing for combining multiple plots. Check the code in my [GitHub repo](https://github.com/ancazugo/TidyTuesday/tree/main/2021/Week_04_Kenya_Census).
+
+<!-- 
 ``` r
 library(tidyverse)
 library(patchwork)
@@ -146,4 +149,4 @@ final_plot <- (livestock_plots / crops_plots) +
                     ))
 
 ggsave('kenya_census.png', final_plot, device = 'png', width = 50, height = 30, units = 'cm', dpi = 300)
-```
+``` -->

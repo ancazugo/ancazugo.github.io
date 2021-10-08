@@ -3,12 +3,15 @@ layout: "page"
 title: "TATE Art Collection"
 subtitle: "Color analysis of the TATE Art Collection"
 image: /assets/images/projects/tidytuesday/art_collection.png
-date:   2021-01-24 20:26:08 -0500
+date: 2021-01-24
 interactive: false
 categories: r tidytuesday
 permalink: /:categories/:title.html
 ---
 
+For my second entry in the TidyTuesday contest, I wanted to play with colors and this dataset was perfect because I could use several libraries to analyze images and pick and average color. I created a heatmap through decades and sex of the author of the artwork in the TATE collection. You can clearly see that female palettes are more diverse than men's. Check the code in my [GitHub repo](https://github.com/ancazugo/TidyTuesday/tree/main/2021/Week_03_Art_Collection).
+
+<!-- 
 ``` r
 library(tidytuesdayR)
 library(tidyverse)
@@ -149,4 +152,4 @@ ggplot(color_grouped_df, aes(x = year_unit, y = decade)) +
   )
 
 ggsave('art_collection.png', device = 'png', width = 50, height = 30, units = 'cm', dpi = 300)
-```
+``` -->

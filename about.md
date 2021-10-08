@@ -6,7 +6,7 @@ image: assets/images/about.jpeg
 
 Hello, I am Andrés Camilo Zúñiga González, a Colombian 🇨🇴 biologist with a keen interest in programming and all its branches, from data science and machine learning, to web and game development.
 
-I have had experience working in the field of paleoecology, specially in ancient and environmental DNA, as well as using other environmental proxies to understand changes through in the past 11.000 thousand years.
+I have had experience working in the field of paleoecology at <a href="https://paleouniandes.weebly.com/">Paleolab</a>, specially in ancient and environmental DNA, as well as using other environmental proxies to understand changes in the past 11.000 thousand years.
 
 At a technical level, I am proficient in several programming languages such as R, Python, Java, Javascript, LaTex, HTML, CSS, and softwares and frameworks including ArcGIS, QGIS, Google Earth Engine, Microsoft Office Suite and Git.
 

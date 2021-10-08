@@ -3,12 +3,15 @@ layout: "page"
 title: "Transit Cost Project"
 subtitle: "Using ggbump and ggflags for ranking analysis"
 image: /assets/images/projects/tidytuesday/transit_cost_project.png
-date:   2021-01-17 20:26:08 -0500
+date: 2021-01-17
 interactive: false
 categories: r tidytuesday
 permalink: /:categories/:title.html
 ---
 
+I have seen on Twitter the abundance of amazing visualizations made with R for the last copuple of weeks, so I wanted to give it try in the TidyTuesday contest and this is my first attempt. I wanted to create a ranking of the countries that spend the most and build the most in public transport. For this purpose, I made use of the ggbump and ggflags libraries that allow for a seamless visualization. Check the code in my [GitHub repo](https://github.com/ancazugo/TidyTuesday/tree/main/2021/Week_02_Transit_Cost_Project).
+
+<!-- 
 ``` r
 library(tidytuesdayR)
 library(tidyverse)
@@ -83,4 +86,4 @@ ggplot(df_rank, aes(x = metric, y = rank, country = tolower(country), color = co
 
 ``` r
 ggsave('transit_cost_project.png', device = 'png', width = 50, height = 30, units = 'cm', dpi = 300)
-```
+``` -->

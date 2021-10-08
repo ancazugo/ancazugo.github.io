@@ -1,13 +1,32 @@
 ---
 layout: generic
-title: Andrés is passionate about programming and its applications 
+title: Hi! I'm Andrés, welcome to my page! 
 image: assets/images/home.jpg
 ---
 
-Find more about my background, my projects and interests in this website.
+
+<h2>Recent News</h2>
+
+<ul>
+	<li>
+		<b>2021-08-03</b> I started working for <a href="https://trudata.com.co/">Trudata</a> &#x1f4ca;
+	</li>
+	<li>
+		<b>2021-08-01</b> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377839821000414">My first paper</a> as a co-author came out. Go check Valentina Ramírez's work!! 👨‍🔬
+	</li>
+	<li>
+		<b>2021-02-01</b> I started teaching the new course Inference and Informatics at Universidad de los Andes &#x1f4d6;
+	</li>
+	<li>
+		<b>2020-11-19</b> I finished the DS4A course with honours 💻
+	</li>
+	<li>
+		<b>2020-08-21</b> I graduated from my Masters degree (virtually) 👨‍🎓
+	</li>
+</ul>
 
 <ul class="actions">
-	<li><a href="/about" class="button big">Learn More</a></li>
+	<li><a href="/about" class="button big">About</a></li>
 </ul>
 
 <!-- Section -->
