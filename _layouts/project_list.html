@@ -4,8 +4,9 @@ layout: default
 
 <section>
 	<header class="major">
-		<h2>Projects</h2>
+		<h2>{{ page.title }}</h2>
 	</header>
+	{{ content }}
 	<div class="posts">
         {% for project in site.posts %}
 		<article>

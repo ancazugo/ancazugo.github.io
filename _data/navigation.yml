@@ -2,5 +2,9 @@
   link: /
 - name: About Me
   link: /about
-- name: Projects
-  link: /projects
+- name: Research
+  link: /research
+- name: Visualizations
+  link: /visualizations
+- name: Artwork
+  link: /artwork

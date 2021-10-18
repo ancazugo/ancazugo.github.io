@@ -2,7 +2,7 @@
 title: Portfolio
 subtitle: by Andrés Zúñiga González
 email: ancazugo@hotmail.com
-description: A FREE AND FULLY RESPONSIVE SITE TEMPLATE
+description: A portfolio by Andrés Zúñiga González
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
@@ -14,7 +14,6 @@ country: Colombia
 phone: (+57) 318 869 26 15
 
 # Social settings
-# 500px_url: ancazugo.github.io
 facebook_url: https://facebook.com/ancazugo
 github_url: https://github.com/ancazugo
 # gitlab_url: https://gitlab.com/u/andrewbanchich

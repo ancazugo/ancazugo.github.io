@@ -9,7 +9,7 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
-		<b>2021-08-03</b> I started working for <a href="https://trudata.com.co/">Trudata</a> &#x1f4ca;
+		<b>2021-08-03</b> I started working for <a href="https://trudata.com.co/">Trudata as a data analyst</a> &#x1f4ca;
 	</li>
 	<li>
 		<b>2021-08-01</b> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377839821000414">My first paper</a> as a co-author came out. Go check Valentina Ramírez's work!! 👨‍🔬
