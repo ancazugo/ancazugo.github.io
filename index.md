@@ -9,6 +9,9 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
+		<b>2021-11-04</b> I was promoted to Data Scientist at <a href="https://trudata.com.co/">Trudata</a> &#x1f4ca;
+	</li>
+	<li>
 		<b>2021-08-03</b> I started working for <a href="https://trudata.com.co/">Trudata</a> as a data analyst &#x1f4ca;
 	</li>
 	<li>
