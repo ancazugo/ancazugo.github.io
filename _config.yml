@@ -10,8 +10,8 @@ street_address: Bogotá
 # city: Nashville
 # state: TN
 # zip_code: 55555
-country: Colombia
-phone: (+57) 318 869 26 15
+country: United Kingdom
+phone: (+44) 07858 600851
 
 # Social settings
 facebook_url: https://facebook.com/ancazugo
@@ -26,6 +26,6 @@ twitter_url: https://twitter.com/ancazugo
 google_scholar: https://scholar.google.com/citations?user=9guCE0wAAAAJ&hl=es&oi=ao
 researchgate: https://www.researchgate.net/profile/Andres-Zuniga-Gonzalez
 google_analytics: G-0WBJKLJYX9
-updated: March 2022
+updated: October 2022
 # Build settings
 markdown: kramdown

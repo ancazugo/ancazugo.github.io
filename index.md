@@ -9,6 +9,9 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
+		<b>2022-09-26</b> I started the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER program</a> at the University of Cambridge</a> &#127919;
+	</li>
+	<li>
 		<b>2021-11-04</b> I was promoted to Data Scientist at <a href="https://trudata.com.co/">Trudata</a> &#x1F680;
 	</li>
 	<li>
