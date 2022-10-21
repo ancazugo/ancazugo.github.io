@@ -6,7 +6,7 @@ description: A portfolio by Andrés Zúñiga González
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
-street_address: Bogotá
+street_address: Cambridge
 # city: Nashville
 # state: TN
 # zip_code: 55555
