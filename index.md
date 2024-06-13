@@ -9,6 +9,15 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
+		<b>2022-09-26</b> I presented my PhD work at EGU24 in Vienna.
+	</li>
+	<li>
+		<b>2023-10-01</b> I started the PhD part of the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER program</a> in the Department of Architecture at the University of Cambridge</a>, under the supervision of Dr. Ronita Bardhan and Dr. Anil Madhavapeddy.
+	</li>
+	<li>
+		<b>2022-09-26</b> I finished the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER</a> MRes year with a dissertation on mapping individual trees in Cambridge using AI.
+	</li>
+	<li>
 		<b>2022-09-26</b> I started the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER program</a> at the University of Cambridge</a> &#127919;
 	</li>
 	<li>
@@ -19,15 +28,6 @@ image: assets/images/home.jpg
 	</li>
 	<li>
 		<b>2021-08-01</b> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377839821000414">My first paper</a> as a co-author came out. Go check Valentina Ramírez's work!! 👨‍🔬
-	</li>
-	<li>
-		<b>2021-02-01</b> I started teaching the new course Inference and Informatics at Universidad de los Andes &#x1f4d6;
-	</li>
-	<li>
-		<b>2020-11-19</b> I finished the DS4A course with honours 💻
-	</li>
-	<li>
-		<b>2020-08-21</b> I graduated from my Masters degree (virtually) 👨‍🎓
 	</li>
 </ul>
 
