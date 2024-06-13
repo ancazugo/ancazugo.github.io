@@ -9,22 +9,22 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
-		<b>2022-09-26</b> I presented my PhD work at EGU24 in Vienna.
+		<b>2024-04-19</b> I presented my PhD work at EGU24 in Vienna on Green Urban Equity in the UK.
 	</li>
 	<li>
 		<b>2023-10-01</b> I started the PhD part of the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER program</a> in the Department of Architecture at the University of Cambridge</a>, under the supervision of Dr. Ronita Bardhan and Dr. Anil Madhavapeddy.
 	</li>
 	<li>
-		<b>2022-09-26</b> I finished the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER</a> MRes year with a dissertation on mapping individual trees in Cambridge using AI.
+		<b>2023-07-25</b> I finished the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER</a> MRes year with a dissertation on mapping individual trees in Cambridge using AI.
 	</li>
 	<li>
 		<b>2022-09-26</b> I started the <a href="ai4er-cdt.esc.cam.ac.uk/">AI4ER program</a> at the University of Cambridge</a> &#127919;
 	</li>
 	<li>
-		<b>2021-11-04</b> I was promoted to Data Scientist at <a href="https://trudata.com.co/">Trudata</a> &#x1F680;
+		<b>2021-11-04</b> I was promoted to Data Scientist at <a href="https://www.dataleik.co/">DataLeik (formerly Trudata)</a> &#x1F680;
 	</li>
 	<li>
-		<b>2021-08-03</b> I started working for <a href="https://trudata.com.co/">Trudata</a> as a data analyst &#x1f4ca;
+		<b>2021-08-03</b> I started working for <a href="https://www.dataleik.co/">DataLeik (formerly Trudata)</a> as a data analyst &#x1f4ca;
 	</li>
 	<li>
 		<b>2021-08-01</b> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377839821000414">My first paper</a> as a co-author came out. Go check Valentina Ramírez's work!! 👨‍🔬
