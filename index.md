@@ -9,6 +9,9 @@ image: assets/images/home.jpg
 
 <ul>
 	<li>
+		<b>2025-02-11</b> I presented work coupling ground-based sensors with remote sensing products in collaboration with Josh Millar from Imperial College at BIOSPACE25 in ESA HQ in Frascati.
+	</li>
+	<li>
 		<b>2024-04-19</b> I presented my PhD work at EGU24 in Vienna on Green Urban Equity in the UK.
 	</li>
 	<li>
