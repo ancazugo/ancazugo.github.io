@@ -1,15 +1,12 @@
 # Site settings
 title: Portfolio
 subtitle: by Andrés Zúñiga González
-email: ancazugo@hotmail.com
+email: ancazugo@hotmail.com; acz25@cam.ac.uk
 description: A portfolio by Andrés Zúñiga González
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
 street_address: Cambridge
-# city: Nashville
-# state: TN
-# zip_code: 55555
 country: United Kingdom
 phone: (+44) 07858 600851
 
@@ -20,8 +17,6 @@ github_url: https://github.com/ancazugo
 researchgate_url: https://www.researchgate.net/profile/Andres-Zuniga-Gonzalez
 instagram_url: https://instagram.com/ancazugo
 linkedin_url: https://www.linkedin.com/in/ancazugo
-# pinterest_url:
-# slack_url:
 twitter_url: https://twitter.com/ancazugo
 google_scholar: https://scholar.google.com/citations?user=9guCE0wAAAAJ&hl=es&oi=ao
 researchgate: https://www.researchgate.net/profile/Andres-Zuniga-Gonzalez
