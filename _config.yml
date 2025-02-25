@@ -24,3 +24,6 @@ google_analytics: G-0WBJKLJYX9
 updated: February 2025
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-feed
+
