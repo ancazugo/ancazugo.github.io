@@ -26,4 +26,6 @@ updated: February 2025
 markdown: kramdown
 plugins:
   - jekyll-feed
+feed:
+  url: ancazugo.github.io/feed.xml
 
