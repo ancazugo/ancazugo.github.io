@@ -3,8 +3,8 @@ title: Portfolio
 subtitle: by Andrés Zúñiga González
 email: ancazugo@hotmail.com; acz25@cam.ac.uk
 description: A portfolio by Andrés Zúñiga González
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://ancazugo.github.io"  # Your website's full URL
+baseurl: ""  # Leave empty if your site is at the root
 author:
 street_address: Cambridge
 country: United Kingdom
