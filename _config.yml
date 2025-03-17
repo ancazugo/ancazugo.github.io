@@ -1,8 +1,8 @@
 # Site settings
-title: Portfolio
+title: Andrés Zúñiga-González's Blog
 subtitle: by Andrés Zúñiga González
 email: ancazugo@hotmail.com; acz25@cam.ac.uk
-description: A portfolio by Andrés Zúñiga González
+description: Andrés Zúñiga-González's website
 url: "https://ancazugo.github.io"  # Your website's full URL
 baseurl: ""  # Leave empty if your site is at the root
 author:
