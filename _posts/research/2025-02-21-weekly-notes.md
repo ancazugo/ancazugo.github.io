@@ -7,7 +7,7 @@ date: 2025-02-21
 interactive: true
 image_link: https://pinea.app.carto.com/map/f4087ee0-7565-4902-bd8f-eb8fe30c0b37
 categories: research outreach
-permalink: /:categories/:date/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 ---
 
 So back to the routine after coming from Italy for BIOSPACE25. It was a really great experience in the ESA HQ but I got a cold from Italy 😷.

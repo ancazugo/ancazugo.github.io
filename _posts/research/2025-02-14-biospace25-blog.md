@@ -6,7 +6,7 @@ image: /assets/images/projects/research/biospace25.jpg
 date: 2025-02-14
 interactive: false
 categories: research outreach
-permalink: /:categories/:date/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 ---
 
 ## Day 2
