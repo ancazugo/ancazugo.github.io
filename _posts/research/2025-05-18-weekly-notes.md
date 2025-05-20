@@ -4,8 +4,7 @@ title: "2025-05-18 Weekly Notes"
 subtitle: "Weekly notes"
 image: /assets/images/projects/research/2025-05-18-week.png
 date: 2025-05-18
-interactive: true
-image_link: https://ucam-digital-twin.streamlit.app/
+interactive: false
 categories: research outreach
 permalink: /:categories/:year/:month/:day/:title.html
 ---
