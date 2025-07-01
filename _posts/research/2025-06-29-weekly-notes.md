@@ -9,7 +9,7 @@ categories: research outreach
 permalink: /:categories/:year/:month/:day/:title.html
 ---
 
-Last week was unexpectedly devoted to sorting things out with my scholarship due to un unforeseen issue. However, I managed to finish all the sections in the 3-30-300 paper, except for the discussion which needs polishing. I added a couple of plots and rearranged the results with a story for each subsection. I'm really becoming a power user of Gemini for correcting writing style to find an academic text. Linked below is a plot that summarises one of the points I make in the manuscript about how the 3-30-300 is reflected in population numbers.
+Last week was unexpectedly devoted to sorting things out with my scholarship due to an unforeseen issue. However, I managed to finish all the sections in the 3-30-300 paper, except for the discussion which needs polishing. I added a couple of plots and rearranged the results with a story for each subsection. I'm really becoming a power user of Gemini for correcting writing style to fit an academic text. Linked below is a plot that summarises one of the points I make in the manuscript about how the 3-30-300 is reflected in population numbers.
 
 I briefly tried to use ApacheSedona to do zonal statistics on the buildings dataset to create a 30-metric per building using a buffer area, but it wasn't very easy to do, due to the size and extent of the images. This was only to test if I could add more granularity to the paper methods for some of the spectral indexes, but using census polygons should be good enough.
 
