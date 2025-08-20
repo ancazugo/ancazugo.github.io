@@ -26,6 +26,10 @@ website:
         href: https://github.com/ancazugo
       # - text: "{{< iconify fa7-brands bluesky >}}"
       #   href: https://bsky.app/profile/ancazugo.bsky.social
+      # - icon: twitter
+      #   href: https://x.com/ancazugo
+      # - icon: instagram
+      #   href: https://www.instagram.com/ancazugo/
       - icon: linkedin
         href: https://www.linkedin.com/in/ancazugo/
       - text: "{{< iconify academicons orcid-square >}}"
@@ -43,7 +47,6 @@ website:
     right: >-
      {{< iconify material-symbols update-rounded >}} {{< env LAST_UPDATED >}}
       
-  
 format:
   html:
     theme:

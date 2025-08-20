@@ -31,8 +31,6 @@ jobs:
           version: pre-release
       - name: Get last commit date
         run: echo "LAST_UPDATED=$(git log -1 --format=%cd --date=format:'%B %d, %Y')" >> $GITHUB_ENV
-      
-
       - name: "Build"
         shell: bash
         run: |
@@ -42,15 +40,12 @@ jobs:
           else
             quarto render --output-dir _site
           fi
-
       - name: "Configure GitHub Pages"
         uses: actions/configure-pages@v5
-
       - name: "Upload Pages Artifact"
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site"
-
       - name: "Deploy"
         id: deployment
         uses: actions/deploy-pages@v4
