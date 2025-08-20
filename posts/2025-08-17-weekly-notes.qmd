@@ -6,6 +6,8 @@ categories:
 - quarto
 ---
 
+## Intro
+
 Lot of things have happened in the last week: I had my first batch of summer school lectures where I talked about data visualisation and urban planning to undergraduate students from Chinese universities. Overall the feedback was good and I got to present my work in the urban planning session.
 
 ## Website

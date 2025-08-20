@@ -11,7 +11,7 @@ listing:
   page-size: 4
   grid-columns: 2
   image-placeholder: assets/images/home.png
-  fields: [image, date, title, author, reading-time]
+  fields: [image, date, title, categories, author, reading-time]
   feed:
     categories: [phd]
 ---
