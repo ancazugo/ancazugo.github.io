@@ -31,7 +31,7 @@ about:
 
 ::: {#hero-heading}
 
-I am a Colombian environmental technologist and PhD student at the University of Cambridge. Most of my days are spent playing with vectors and pixels trying to measure the effect of green and blue infrastructure in cities and how to make them more sustainable. Passionate about open source tools, geography, history and sports.
+I am PhD student at the University of Cambridge and enthusiast about technology and natural environments. Most of my days are spent playing with vectors and pixels trying to measure the effect of green and blue infrastructure in cities and how to make them more sustainable. Passionate about open source tools, geography, history and sports.
 
 [Learn more about me &rarr;](/about.qmd)
 :::
