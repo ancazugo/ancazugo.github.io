@@ -1,0 +1,17 @@
+---
+categories:
+- python
+- leaflet
+- dataviz
+- map
+date: 2020-12-15
+image: ../assets/images/projects/blog/mapa_murcielagos.png
+image_link: https://ancazugo.github.io/Tesis_Mafe/trypanosoma_leishmania.html
+interactive: true
+subtitle: Distribution of Trypanosomatid-carrying bats in Casanare, Colombia
+title: Bat Species Distribution in Casanare
+---
+
+## Interactive Version
+
+<iframe src="https://ancazugo.github.io/Tesis_Mafe/trypanosoma_leishmania.html" width="100%" height="500px"></iframe>

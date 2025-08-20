@@ -1,0 +1,18 @@
+---
+categories:
+- javascript
+- d3
+- dataviz
+date: 2019-09-17
+image: ../assets/images/projects/blog/icfes_scatter.png
+interactive: false
+subtitle: Visualization of the results of the nationwide exam for teenagers in Colombia
+title: Education Analysis by Subject and Economic Stratum
+---
+
+This is my first app in D3.js, where I want to illustrate the stratification of education in Colombia. Students graduating from high school in Colombia have to sit the Saber exams which evaluate a number of subjects (such as SAT in the US of A-levels in the UK). Here, using a continuos color scale, I show how stratified the results of the exam are. In Colombia, households are divided into 6 categories, from 1 to 6, according to their economic and social capabilities, so 1 is for the poor families and 6 is for really rich homes. As you can see, the economic differences translate into education results, in almost every department of Colombia. If you want to know more, check the [Observable notebook](https://observablehq.com/@ancazugo/la-educacion-basica-en-colombia-si-esta-estratificada-los-e) for the live app and code.
+
+
+## Visualization
+
+![Education Analysis by Subject and Economic Stratum](../assets/images/projects/blog/icfes_scatter.png)

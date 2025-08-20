@@ -1,0 +1,18 @@
+---
+categories:
+- qgis
+- map
+- dataviz
+date: 2019-12-03
+image: ../assets/images/projects/blog/elevation_3d.png
+interactive: false
+subtitle: "Visualization of the Cordillera viewed from the East near Bogot\xE1"
+title: 3D model of the Eastern Cordillera of Colombia
+---
+
+As part of my Masters Thesis at Universidad de los Andes, where I wanted to understand past changes in the Eastern Cordillera de los Andes in Colombia, I worked in a páramo located near Bogotá, specifically, on the east side of the mountains. For my presentation and poster at AGU100, I created this 3D view of the study site using QGIS and DEM data available at Earth Explorer.
+
+
+## Visualization
+
+![3D model of the Eastern Cordillera of Colombia](../assets/images/projects/blog/elevation_3d.png)

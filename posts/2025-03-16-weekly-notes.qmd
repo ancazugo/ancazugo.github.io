@@ -1,0 +1,19 @@
+---
+title: 2025-03-16 Weekly Notes
+date: 2025-03-16
+image: ../assets/images/projects/phd-blog/2025-03-16-week.png
+categories:
+- phd
+- dataviz
+- map
+---
+
+Most of my week was devoted to debugging my code to count the number of trees per geographical area. As mentioned in previous posts, I've been using Apache Sedona to process all my vector files, which has reduced the computation time significantly, particularly for spatial joins around all buildings in England. However, I realised that I hadn't actually counted how many trees there are in total, which sounds trivial, but it turned out to be not as easy with the code that I had. So it turns out that when you are doing a Spatial Join with an Spatial RDD, you are only expected to pass two columns, the identifier and geometry for each row. This is not present in the docs, but I found it by accident while converting from Spark DataFrames to RDDs. Also, due to the number of trees (in the hundreds of millions range for England. Urban Cambridge apparently has ~66K 😉), I had to increase the memory requirements of the Sedona config but then it didn't run, so what I ended up doing was iteratating over each Local Authority and querying the trees for that area, while counting the number of trees in each LSOA (Local Authorities are made by many LSOAs). This takes about 2 hours to run but was the best solution I found to overcome the Spark errors. Also, I realised that for ~300 LSOAs, I wasn't getting any trees but it's because their raster files, even though read by Rasterio, are corrupted due to inlavid values. It was very tricky to find the solution to this but a simple call to the object's values can be caught by the `try/except` clause so that solved it for now. The good news is that all of these corrections are done and now I (hope to) finally have a clean and complete dataset for analysis which will be my main goal for this week, so I can complete the results and discussion of this paper. And right on time because it´s the end of the term so my focus will be this on for the start of the Easter break. Speaking of, at some point in the next weeks I will write an in-depth blog about working with Sedona after the paper is done, because I feel that a lot of people (academics in particular) would benefit from it since the tool is in its early adoption phase in the industry, while very few academics use it in their workflow.
+
+On a side note, my supervisions for the academic year finished last week. I was teaching the Maths and Programming course for the new design tripos in the Department of Architecture. It was a very nurturing experience that allowed me to teach in the Cambridge system, which is very unique, but also gave me the chance to re-learn some of the mathematical concepts, notably linear algebra and differential calculus that are behind ML algorithms. I had learned those more than 10 years ago when I was in Uni, and I was surprised of how rusty I was with my math. Related to this, I just started reading [Why Machines Learn](https://www.penguin.co.uk/books/446849/why-machines-learn-by-ananthaswamy-anil/9780241586488) by Anil Ananthaswamy, for a more in-depth refresher on Maths. Will come back to this with my comments once I finish it.
+Finally, I successfully finished the intermediate 1 French course (sort of B1), which means that I can say *Je ne sais pas* when I don't understand why my code behaves in a unexpected way. 🤣
+
+
+## Visualization
+
+![2025-03-16 Weekly Notes](../assets/images/projects/phd-blog/2025-03-16-week.png)

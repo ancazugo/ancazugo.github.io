@@ -1,0 +1,37 @@
+---
+title: "Andrés C. Zúñiga-González"
+subtitle: "PhD Student @ University of Cambridge"
+image: assets/images/home.png
+comments: false
+
+about:
+    template: solana 
+    image-width: 30em
+    image-shape: round
+    links: 
+      - icon: github
+        href: https://github.com/ancazugo
+      # - text: "{{< iconify fa7-brands bluesky >}}"
+      #   href: https://bsky.app/profile/ancazugo.bsky.social
+    #   - icon: twitter
+    #     href: https://x.com/ancazugo
+    #   - icon: instagram
+    #     href: https://www.instagram.com/ancazugo/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ancazugo/
+      - text: "{{< iconify academicons orcid-square >}}"
+        href: https://orcid.org/0000-0003-3494-1135
+      - text: "{{< iconify academicons researchgate-square >}}"
+        href: https://www.researchgate.net/profile/Andres-Zuniga-Gonzalez
+      - text: "{{< iconify academicons google-scholar-square >}}"
+        href: https://scholar.google.com/citations?hl=en&user=9guCE0wAAAAJ
+      - text: "{{< iconify majesticons mail-line >}}"
+        href: mailto:ancazugo@gmail.com
+---
+
+::: {#hero-heading}
+
+I am a Colombian environmental technologist and PhD student at the University of Cambridge. Most of my days are spent playing with vectors and pixels trying to measure the effect of green and blue infrastructure in cities and how to make them more sustainable. Passionate about open source tools, geography, history and sports.
+
+[Learn more about me &rarr;](/about.qmd)
+:::

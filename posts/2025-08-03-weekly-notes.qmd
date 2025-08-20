@@ -1,0 +1,46 @@
+---
+title: 2025-08-03 Weekly Notes
+date: 2025-08-03
+image: ../assets/images/projects/phd-blog/2025-08-03-week.png
+categories:
+- phd
+- carto
+- map
+- dataviz
+---
+
+After a week of slow progress in the project with nothing worth highlighting, hence the two week-hiatus in the blog, last week I made a lot of progress on the paper, with Ronita and Anil's corrections:
+
+First and probably most importantly, I felt that the paper was missing some actual statistical tests that could validate my results. Plots look good on paper but without actual support from stats, they can be misleading from my point of view. For this reason I added three spatial error models to demonstrate the usefulness of the remote sensing-derived metrics in explaining inequality. This kind of models accounts for spatial correlation. This change led to a new section in the paper's methods and results sections and more discussion content that I'm finalising this week.
+
+Furthermore, with the errors in the tree count functions now corrected, I re did all the plots in the paper for better accuracy, even though visually they don't change that much. In addition to this, some of the choropleth maps I've shown here in the blog have been redesigned to include barplots/histograms as legends, partially inspired by posts on LinkedIn where I've seen this more commonly used. [This blogpost](https://www.andrewheiss.com/blog/2025/02/19/ggplot-histogram-legend/) helped me come up with a way to do it in R. Also, this was also motivated by the book [_How to Lie with Maps_](https://www.amazon.co.uk/How-Maps-Third-Mark-Monmonier/dp/022643592X) by Mark Monmonier that I recently finished. It's a good resource on cartography for newbies, especially about theory and history of maps, but it lacks on the current trends and tools for map making.
+
+Finally, following the FAIR principles, in addition to making the code available and writing proper documentation (see the brand new [code's repo](https://ancazugo.github.io/3-30-300-analysis/)), I aimed at creating two ways of making my results accessible via web apps: (1) one depicting the aggregated results for each LSOA in England and the other showing the tree segmentation results. I had done small attempts in the past months using CARTO for [aggregated data] (2025-03-23-weekly-notes.html) and [tree locations](2025-03-09-weekly-notes.html). I wanted to build one with Google Earth Engine Apps but there are downsides in user friendliness and scalability. GEE only receives shapefiles as input which is fine for the aggregated data because it's actually not that big once geometries are simplified, but the trees are not so easy; they are almost 200M polygons, and saving all of them into multiple shapefiles (even after simplifying geometries to points) would create massive files that then need to be imported into GEE as separate layers. For now, I created a map using CARTO again for the aggregated data for a summer school activity with kids (see below), but my goal is to move it to GEE so I can display the spectral indices in the same place more easily. In regards to tree segmentation, I will likely stick to CARTO using partitioned parquet files, but I am tempted to create vector tilesets using tools like [Tippecanoe](https://github.com/felt/tippecanoe?tab=readme-ov-file), however, I've never done that before so we'll see what the better option is.
+
+Finally, and totally unrelated, over the last couple of weeks, I've come across the Rust programming language several times, either in conversations with friends or by reading online about projects written in Rust (like [uv](https://docs.astral.sh/uv/) or [Polars](https://pola.rs/)), that left me wondering if it's worth adding it to my toolbox as a low-level language. As a non-CS person, I've barely played around with C/C++ and although I don't consider myself a bad programmer, I don't think I have the proper theoretical foundation to experiment with tools beyond the realm of R and Python (and a bit of JavaScript). However, I'm looking for resources and ways to ~~procrastinate my PhD~~ start small and gain momentum, so if anyone has suggestions or advice, they are more than welcome 🙃.
+
+## Past Weekly Objectives
+- ~~FINISH THE PAPER MANUSCRIPT!!!!~~
+  - ~~Organise the supplementary material~~
+- Move the trees dataset to an CARTO ~~Earth Engine~~ App (TODO)
+  - Publish them in Zenodo as well
+  - ~~Figure out how to split the data for massive upload to Google Cloud ~~
+- ~~Resume documenting the code for the 3-30-300 paper~~
+  - ~~Update the docstring for some functions that have changed~~
+  - ~~Use mkdocs to create the github pages website to link in the paper~~
+- Make the corrections to the manuscript (on it)
+  - ~~Change image order and reduce number of tables~~
+- ~~Apply to [PROPL25](https://propl.dev/)~~
+- ~~Prepare slides for AI4ER training event~~
+
+## Weekly Objectives
+- Make the corrections to the manuscript
+  - Update methods and results
+- Design UI for Earth Engine App of aggregated data
+- Start working with TESSERA
+- Prepare content for summer schools
+
+
+## Interactive Version
+
+<iframe src="https://pinea.app.carto.com/map/b3266c6b-4a59-429f-9788-dd702c5a82d2" width="100%" height="500px"></iframe>

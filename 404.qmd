@@ -1,0 +1,28 @@
+---
+title: "Page Not Found"
+subtitle: "404 Error"
+comments: false
+---
+
+# Oops! Page Not Found
+
+The page you're looking for doesn't exist. It might have been moved, deleted, or you may have typed the wrong URL.
+
+## What you can do:
+
+- **Go back to the [Home page](/)** to start over
+- **Check out the [Blog](/blog.html)** for recent posts
+- **Visit the [About page](/about.html)** to learn more about my work
+
+## Looking for something specific?
+
+Try using the search function on the [Blog](/blog.html) pages to find what you're looking for.
+
+::: {.callout-note}
+## Need Help?
+If you think this page should exist, feel free to [contact me](mailto:acz25@cam.ac.uk) and let me know about the broken link.
+:::
+
+---
+
+*Return to [Home](/)*

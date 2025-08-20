@@ -1,0 +1,67 @@
+project:
+  type: website
+
+website:
+  title: "Andrés Zúñiga-González"
+  description: "PhD Student in AI for Environmental Risk at University of Cambridge"
+  site-url: https://ancazugo.github.io/temp
+  back-to-top-navigation: true
+  open-graph: true
+  google-analytics: G-EZYSPQ2878
+  cookie-consent: true
+  search: 
+    location: navbar
+    type: textbox
+  navbar:  
+    right:
+      - href: about.qmd
+        text: About
+      - href: blog.qmd
+        text: Blog
+      # - href: services.qmd
+      #   text: Services
+  page-footer: 
+    center: 
+      - icon: github
+        href: https://github.com/ancazugo
+      # - text: "{{< iconify fa7-brands bluesky >}}"
+      #   href: https://bsky.app/profile/ancazugo.bsky.social
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ancazugo/
+      - text: "{{< iconify academicons orcid-square >}}"
+        href: https://orcid.org/0000-0003-3494-1135
+      - text: "{{< iconify academicons researchgate-square >}}"
+        href: https://www.researchgate.net/profile/Andres-Zuniga-Gonzalez
+      - text: "{{< iconify academicons google-scholar-square >}}"
+        href: https://scholar.google.com/citations?hl=en&user=9guCE0wAAAAJ
+      - text: "{{< iconify majesticons rss >}}"
+        href: index.xml
+      - text: "{{< iconify fa7-solid envelope >}}"
+        href: mailto:ancazugo@gmail.com
+    left: >-
+     &#169; Andrés C. Zúñiga-González &#8729; made with {{< quarto >}}
+    right: >-
+     {{< iconify material-symbols update-rounded >}} {{< env LAST_UPDATED >}}
+      
+  
+format:
+  html:
+    theme:
+      light: lightly
+      dark: darkly
+    css: styles.css
+    toc: true
+    grid: 
+      body-width: 1000px
+
+comments:
+  utterances:
+    repo: ancazugo/ancazugo.github.io
+
+filters:
+  - watermark
+
+watermark:
+  text: Site under construction
+  size: 1
+  opacity: 0.05

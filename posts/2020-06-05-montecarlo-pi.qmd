@@ -1,0 +1,18 @@
+---
+categories:
+- r
+- shiny
+date: 2020-06-05
+image: ../assets/images/projects/blog/montecarlo_pi.png
+image_link: https://ancazugo.shinyapps.io/montecarlo_pi/
+interactive: true
+subtitle: "Using Shiny to build an app to estimate \u03C0"
+title: "Montecarlo Estimation of \u03C0"
+---
+
+As part of the Data Science Specialization in Data Science, and also as a fun way to learn how to build Shiny apps, I developed this small app that allows the user to determine the value of π with via Montecarlo. The app has several options to control the number of random points, as well as the seed and the size of the circle. If you want to know more about the calculations behind this, check the [slides](https://rpubs.com/ancazugo/montecarlopi) published in RPubs and visit the shiny app in its [website](https://ancazugo.shinyapps.io/montecarlo_pi/). (The app also loads here but may take a while)
+
+
+## Interactive Version
+
+<iframe src="https://ancazugo.shinyapps.io/montecarlo_pi/" width="100%" height="500px"></iframe>

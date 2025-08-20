@@ -1,0 +1,15 @@
+---
+categories:
+- qgis
+- map
+- dataviz
+date: 2021-04-29
+image: ../assets/images/projects/blog/mapa_vitrola.png
+interactive: false
+subtitle: Visualizing a social movement through the eyes of music and maps
+title: Music Expressions in 2019 Santiago Protests
+---
+
+## Visualization
+
+![Music Expressions in 2019 Santiago Protests](../assets/images/projects/blog/mapa_vitrola.png)

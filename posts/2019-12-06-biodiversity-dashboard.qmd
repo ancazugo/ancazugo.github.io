@@ -1,0 +1,18 @@
+---
+categories:
+- javascript
+- d3
+- dataviz
+date: 2019-12-06
+image: ../assets/images/projects/blog/biodiversity_dashboard.png
+interactive: false
+subtitle: An interactive dashboard to measure Colombian biodiversity
+title: Colombian Biodiversity Dashboard
+---
+
+As the final project of the Visual Analytics Course at Uniandes, Alongside my classmates, we developed an interactive dashboard where it is possible to see the count of several animal and plant species recorded by Instituto Humboldt of Colombia, which is in charge of collecting this type of data. For this particular project, I created the Task 1 part with D3.js, where you can see and filter in real time every taxonomic division available and how many specimens have been found and by which institution. You can see the demo deployed [here](https://juanfer960.github.io/ProyectoFinalViz/tarea1.html).
+
+
+## Visualization
+
+![Colombian Biodiversity Dashboard](../assets/images/projects/blog/biodiversity_dashboard.png)

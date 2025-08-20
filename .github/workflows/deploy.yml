@@ -1,0 +1,56 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+      - name: Get last commit date
+        run: echo "LAST_UPDATED=$(git log -1 --format=%cd --date=format:'%B %d, %Y')" >> $GITHUB_ENV
+      
+
+      - name: "Build"
+        shell: bash
+        run: |
+          [ ! -f _quarto.yml ] && echo -e "project:\n  output-dir: _site" > _quarto.yml
+          if grep -q "output-dir: _site" _quarto.yml; then
+            quarto render
+          else
+            quarto render --output-dir _site
+          fi
+
+      - name: "Configure GitHub Pages"
+        uses: actions/configure-pages@v5
+
+      - name: "Upload Pages Artifact"
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+      - name: "Deploy"
+        id: deployment
+        uses: actions/deploy-pages@v4

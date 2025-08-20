@@ -1,0 +1,17 @@
+---
+title: Green Urban Equity in the UK
+date: 2024-04-19
+image: ../assets/images/projects/blog/uk_3_30_300.png
+categories:
+- python
+- carto
+- dataviz
+- map
+---
+
+This is part of my presentation at EGU24 in Vienna that was about mapping green spaces in the UK using the 3-30-300 rule. You can find out more about the abstract [here](https://meetingorganizer.copernicus.org/EGU24/EGU24-20833.html).
+
+
+## Interactive Version
+
+<iframe src="https://pinea.app.carto.com/map/17065acc-6619-45b3-a08e-884c1cdfab35" width="100%" height="500px"></iframe>
