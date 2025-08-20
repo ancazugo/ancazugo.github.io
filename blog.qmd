@@ -10,6 +10,7 @@ listing:
   filter-ui: true
   page-size: 4
   grid-columns: 2
+  image-placeholder: assets/images/home.png
   fields: [image, date, title, author, reading-time]
   feed:
     categories: [phd]

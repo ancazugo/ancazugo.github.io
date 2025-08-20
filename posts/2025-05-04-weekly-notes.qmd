@@ -1,7 +1,6 @@
 ---
 title: 2025-05-04 Weekly Notes
 date: 2025-05-04
-image: ../assets/images/projects/phd-blog/2025-08-03-week.png
 categories:
 - phd
 - dataviz
@@ -16,8 +15,3 @@ I also had an interesting conversation with Anil and one of his MPhil students a
 The highlight of the week was attending the AI for Nature & Climate meeting at DAB with bunch of experts from both the domain and technical side, with many familiar faces from around Cambridge. It was a great opportunity to hear about other people's work and do a bit of networking.
 
 Finally, I finished reading [Good Nature](https://www.bloomsbury.com/uk/good-nature-9781526664891/) by Professor Kathy Willis from Oxford. Quite a good literature review of all the benefits of having nature around you, whether indoors or outdoors. The book is divided into chapters explaining the positive effects of nature on the different senses, and it seems that the most impacted is actually the smell, despite the fact that most research is focused on the visual aspect. Another interesting thing I found in the book is how human microbiome changes with plants around, which begs the question if people at DAB have a distinct bacteria fingerprint to the rest of the city due to the giant green wall in the building.🤔 Overall, I will be using many of the references in the book for my literature review because they are very relevant for my project. My next read is going to be the Nature of Our Cities by [Nadina Galle](https://www.nadinagalle.com/about).
-
-
-## Visualization
-
-![2025-05-04 Weekly Notes](../assets/images/projects/phd-blog/2025-08-03-week.png)

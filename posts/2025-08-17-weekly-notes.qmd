@@ -1,0 +1,39 @@
+---
+title: 2025-08-17 Weekly Notes
+date: 2025-08-17
+categories:
+- phd
+- quarto
+---
+
+Lot of things have happened in the last week: I had my first batch of summer school lectures where I talked about data visualisation and urban planning to undergraduate students from Chinese universities. Overall the feedback was good and I got to present my work in the urban planning session.
+
+## Website
+
+In addition to this, as you can probably see, I spent more time than expected on the new website. This change was something that I had planned months ago and decided to do it over the summer. I switched from Jekyll to Quarto because that would allow me to use Jupyter notebooks or R Markdown notebooks on my posts. In addition, I have more options when it comes to pagination of the posts and filtering, so people can find more easily different posts. The whole design is not even close to being done as it is currently using one of the default Bootstrap themes, so it will change in the coming weeks. 
+
+More sections will also appear to highlight academic content like papers and talks and services for possible consulting opportunities. If someone who reads this and has some comments, please do so below!!!! That will create a pull request on the repo and I can see it more clearly, which is super cool. Also, by doing this I learned something about Continuous Integration (CI) and Deployment with GitHub Actions, which also comes in handy for other stuff. Another key change is that the feed is now RSS, instead of Atom, which I'm not sure if it's going to crash with Recoillama in the Matrix, but if it does I may have found a workaround using CI and a small Python script. 
+
+Kudos to [Mickaël Canouil](https://mickael.canouil.fr/) and [Silvia Canelón](https://silviacanelon.com/) for being inspiration on the structure of the new website. They were more useful than any agentic tool because none of them structured the website as I was looking for. I spent a good chunk of time prompting on the editor with different models using the old website as reference but they struggled to sort the files and create the right YAML headers for the different sections. They also created CSS files that I had explicitly asked not to create and messed up the default design. Safe to say that agentic tools are cool and can be useful for certain things but in this case they made me spend more time on finding errors and then doing it from scratch myself.
+
+## 3-30-300 Project
+
+When it comes to the project, I finally gave it a name (plus some other candidates) and created the Zenodo repo (private for now) for the aggregated data to be accessed because there will be a collaboration with other postgraduate students from Epidemiological MRC in Cambridge. I have also updated the [documentation](https://ancazugo.github.io/3-30-300-analysis/) of the project on GitHub to include the Carto dashboards, so people can navigate there instead of going to weird links that might go down in the future.
+
+## LCZ classification with FM
+
+I set up Geoclimate to work on Python, but the only problem is that it is only capable of getting the local climate zones classification of small areas (like one London borough at a time) due to restrictions in processing OSM data. I initially wanted to use FAO's GAUL political boundaries to access data from different cities, but I had to change it to a dataset that only had the boundaries of urban areas, for which there were a couple of options but I decided to go with the [Global Urban Polygons and Points Dataset (GUPPD)](https://catalog.data.gov/dataset/global-urban-polygons-and-points-dataset-guppd-version-1) by NASA that has the largest coverage and doesn't clip natural areas that are inside cities. This is crucial because natural areas are one of the categories in LCZ classification. With this, what I have to do is get the bounding box of the urban areas and create 1000 km^2 grids inside it to calculate LCZ and then merge them and rasterise them. After that, the next step is to co-register the rasterisation of the LCZ classification from Geoclimate, with the embeddings from TESSERA (or other FM like AlphaEarth) and the global LCZ map, which should facilitate the future steps of the project.
+
+## Past Weekly Objectives
+- ~~Design UI for Earth Engine App of aggregated data~~
+- ~~Actually put a good name on the paper~~
+  - ~~Prepare cover letter for submission~~
+- ~~LCZ classification~~
+  - ~~Create script to run Geoclimate from python (no java)~~
+  - ~~Delineate cities using boundaries or bbox from GAUL~~
+- ~~Prepare summer schools batch 2~~
+
+## Weekly Objectives
+- Prepare the cover letter for submission
+- Clean up the repo documentation
+- Coregister the LCZ classification with EO embeddings/Global LCZ map
