@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic p5.js Sketch</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+
+      // Matrix-style background variables
+      let matrixCols;
+      let matrixRows;
+      let matrixChars = [];
+      let fontSize = 20;
+      let characters = ['A', 'C', 'Z', 'G'];
+
+      function preload() {
+        // Optionally, you could load a font here for more Matrix-like effect
+      }
+
+      function setup() {
+        createCanvas(1000, 1000);
+        background(100, 100, 100);
+        textFont('monospace');
+        textSize(fontSize);
+        matrixCols = floor(width / fontSize);
+        matrixRows = floor(height / fontSize);
+        // Initialize matrix characters
+        for (let x = 0; x < matrixCols; x++) {
+          matrixChars[x] = [];
+          for (let y = 0; y < matrixRows; y++) {
+            matrixChars[x][y] = random(characters);
+          }
+        }
+      }
+
+      function draw() {
+        background(0, 150); // Slightly transparent for trailing effect
+        fill(0, 255, 70); // Matrix green
+        noStroke();
+        for (let x = 0; x < matrixCols; x++) {
+          for (let y = 0; y < matrixRows; y++) {
+            let char = matrixChars[x][y];
+            text(char, x * fontSize, y * fontSize + fontSize);
+            // Randomly change character for flicker effect
+            if (random(1) < 0.05) {
+              matrixChars[x][y] = random(characters);
+            }
+          }
+        }      
+      }
+      
+    </script>
+  </body>
+</html>
