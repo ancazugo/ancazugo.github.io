@@ -26,8 +26,6 @@ In parallel to Geoclimate, I started getting the data for the predictors in this
 I decided on this approach instead of downloading all the tiles from Google Earth Engine because I didn't want to use pixels from non-urbanised areas, which is most of the world.
 In addition to this, I tried to do something similar using the embeddings from TESSERA, where I only request those that match the boundaries from the Geoclimate classification, but I found some bugs in the Python API. Then I realised that it's better to use the development version of TESSERA, instead of the one in PyPi. But, I'm still working on that.
 
-## Past Weekly Objectives
-
 ## Weekly Objectives
 - Rasterise and co-register the LCZ classification from Geoclimate using the projection of the FM embeddings (AlphaEarth or TESSERA)
 - Figure out what the most efficient way to get the embeddings from TESSERA is

@@ -1,0 +1,55 @@
+---
+title: 2025-09-14 Weekly Notes
+date: 2025-09-14
+image: ../assets/images/projects/phd-blog/2025-09-14-week.png
+categories:
+- phd
+---
+
+## Intro
+
+As mentioned in previous posts, for the second big project of my PhD I want to use Geo Foundation Models (GeoFMs) to (re)classify urban areas into Local Climate Zones (LCZs). I've been working on this for the last two weeks and I've made some progress.
+
+## LCZ Classification
+
+### Geoclimate
+
+The running of Geoclimate has caused some issues with `/tmp` directory being full and usage of memory in kinabalu, for which I har to reduce the number of parallel operations from 8 to 2. This has taken way longer than expected for such a small number of cities (515). I'm only missing around 15 of the largest cities in the world, mostly located in Asia. However, with some early inspection of the output of Geoclimate, I found several problems with the classification of grids, likely due to lack of details in OSM data to obtain fabric and building height, which the algorithm uses to determine, for instance, between a high-rise and low-rise area. I haven't inspected all the outputs yet but I suspect that this problem will be more common in Asia, Africa and Latin America. Moreover, the output of the model is a vector file that needs to be rasterised but I stumbled upon a bug with rasterio that I'm trying to fix. Essentially when rasterising, it is not picking the value of the classification and it is creating a 2D array of 0s. 
+
+### Global LCZ Map
+
+Due to the setback with Geoclimate, I decided to use the Global LCZ Map from Demuzere et al., 2022, which is a raster file with the LCZ classification for the entire world for 2018. However, instead of accessing the whole raster from memory, I decided to rely on `GEE` and the xarray extension for it called `xee`. This allows me to access the raster as an xarray object and manipulate the multiple dimensions as one would normally do it with a tif or netcdf file. In addition, it can be optimised using `Dask`, which is a library for parallel computing with arrays.
+
+### Project Structure
+
+Because I was dealing with multiple datasets, I decied to spend a good chunk of time on standardising the data structures for the different GeoFMs and the LCZ datasets. The basis of the project is a `City` object that contains the basic information from the ´GUPPD´ dataset, plus the bounding box in *EPSG:4326* and the Koppen-Geiger Climate Zone. It will also automatically calculate the coordinates of the bounding box in UTM for the given object, which is essential for `xee` and useful for aligning the LCZ labels with the GeoFM embeddings.
+
+Then there is a superclass called GeoFM that is the basis for the GeoTessera and the AlphaEarth classes. These classes contain the methods to download the tiles for the embeddings that overlap the bounding box of the city. All these processes are done while handling the data as `xarray.DataArray` objects, which I found to be easier to work with than as regular `numpy.ndarrays`, due to the spatial capabilities of the library (particularly `rioxarray`). Combining it with dask allows for chunking the data and understanding the data structure (see image below), which could come in handy if time was a variable (e.g. using embeddings from different years).
+
+In the case of GeoTessera, the `geotessera` library downloads the tiles in tif format, but I decided to clip them using the bounding box from the City object. Initially, I thought it was easy to implement the clipping method but it was not as intuitive as the arrays cannot be concatenated but merged. Merging takes longer but it handles the correct positioning of the tiles, while keeping the dimensions of the array. I am also experimenting with writing the embeddings as `zarr` files which is a new format for raster data that is supposed to be more efficient for cloud-based datasets; it definitely uses less space than regular tifs and they load faster using `xarray`/`dask`. However, this clipping step is the longest part of the process and it depends on the size of the arrays, so I would expect bigger cities like London or Tokyo to take up to an hour to process. 
+
+![Array structure of the GeoTessera embeddings for Cambridge](../assets/images/projects/phd-blog/2025-09-14-week-2.png)
+
+### Pixel Classifier
+
+Finally, as Anil suggested I implemented a pixel classifier, based on the geotessera-interactive tutorials. But this time is using xarray methods to sample the pixels from a given city to keep the classes balanced. The `PixelClassifier` object receives an `sklearn` classifier as an attribute and fits the model as one would normally do it. As of now, I have only tested with Random Forest and K-Nearest Neighbours, but it looks promising. 
+
+There are 17 classes in total, but the cities that I have worked with (Cambridge and Bogotá) don't have all of them. Initially what I did was to re-classify the pixels in Built-up (LCZ1-10) vs Natural (LCZ11-17) areas, and it worked pretty well, particularly because the resolution of the GeoFM embeddings is 10x10 m and the LCZs are 100x100 m, so I get more detail in the predictions. I also tried with 3, 4, and 5 classes and both GeoTessera and AlphaEarth worked pretty well. However, it is worth noting that AlphaEarth was trained with many of the datasets that were used to create the LCZ from Demuzere et al., 2022. The image below shows the comparison in the classification of all LCZs for Cambridge in 2018 using GeoTessera (acc=0.59) and AlphaEarth (acc=0.8) using a Random Forest model with 2000 points for training.
+
+![Comparison of the LCZ classification for Cambridge in 2018 using GeoTessera and AlphaEarth](../assets/images/projects/phd-blog/2025-09-14-week.png)
+
+## Objectives
+### Past Weeks
+- ~~Figure out what the most efficient way to get the embeddings from TESSERA is~~
+- ~~Resample the embeddings to the same resolution as the LCZ classification from Geoclimate (100x100m)~~
+- ~~Define the model to be used for the classification~~
+
+### This Week
+- Fix the rasterisation bug from Geoclimate using the projection of the FM embeddings (AlphaEarth or TESSERA)
+  - Test the pixel classifier with the Geoclimate labels
+- Test other cities with the pixel classifier
+- Experiment with other models or try with cross validation to improve the performance
+- Start preparing the talk for PROPL25
+- Start designing the classes for CNN-based models(?)
+
+
