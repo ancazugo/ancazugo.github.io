@@ -25,8 +25,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-        with:
-          submodules: 'recursive'
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
