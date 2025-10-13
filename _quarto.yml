@@ -18,8 +18,8 @@ website:
         text: About
       - href: blog.qmd
         text: Blog
-      - href: talks-slides/index.qmd
-        text: Talks
+      # - href: talks-slides/index.qmd
+      #   text: Talks
       # - href: services.qmd
       #   text: Services
   page-footer: 
