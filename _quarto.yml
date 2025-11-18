@@ -8,7 +8,6 @@ website:
   back-to-top-navigation: true
   open-graph: true
   google-analytics: G-EZYSPQ2878
-  cookie-consent: true
   search: 
     location: navbar
     type: textbox
