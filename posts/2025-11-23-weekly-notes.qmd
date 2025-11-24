@@ -1,6 +1,6 @@
 ---
-title: 2025-11-16 Weekly Notes
-date: 2025-11-16
+title: 2025-11-23 Weekly Notes
+date: 2025-11-23
 # image: ../assets/images/projects/phd-blog/2025-11-16-week.png
 categories:
 - phd
