@@ -1,0 +1,60 @@
+---
+title: 2025-11-16 Weekly Notes
+date: 2025-11-16
+# image: ../assets/images/projects/phd-blog/2025-11-16-week.png
+categories:
+- phd
+---
+
+## Intro
+
+It's been a while since I last posted so thought I would give an update on everything that's been going on in the last couple of weeks, including the 3-30-300 project and related presentations, the new project I'm working on for my PhD and more Tessera stuff (ft. Charles Emogor).
+
+## 3-30-300 Project
+
+In the last 6 weeks I've had the chance to present my work on this paper to different audiences, and I've got very good impressions. The overall consensus of the presentations is that it is very clear, and despite the technical nature of the project and the complexity of it, I've made myself clear. 
+
+- Imperial College at the introductory lecture for the "From Data to Product" course (invited by [Pierre Pinson](https://pierrepinson.com/))
+- Talk + Poster @ PROPL25 Conference (part of ICFP/SPLASH 2025) in Singapore (organised by [Anil](https://anil.recoil.org/))[^1]
+- Group Meeting at the Sustainable Design Group (SDG) (my group in Architecture with [Ronita](https://www.sustainabledesign.arct.cam.ac.uk/))
+- EEG meeting (Computer Science, led by [Keshav](https://www.cst.cam.ac.uk/research/eeg))
+- PhD Conference at the Department of Architecture (for 3rd year PhD students)
+
+In the Imperial talk, I got some interesting takes from Masters students in the Design Engineering course who were very curious on how I got from the raw data to the fancy dashboards (which is what they have to do at the end of the term, I believe). In both the EEG and SDG group meetings, I got some interesting questions about how my metrics can actually impact policymaking and how they can be applied in other countries. In the PhD Conference I got some very good comments from actual architects and people who don't necessarily work with data-related projects. It was definitely challenging to adjust the language, particularly when talking about the methods and technical stuff.
+
+Overall, having all these talks so close to each other was quite intense but the fact that I had to adjust my language and slides to accommodate to the audience definitely helped me to clarify my own thoughts about the project and made me realise which parts are more relevant to different people, which as researchers is crucial when you want to engage with colleagues, policymakers or the general public.
+
+### Paper
+
+The paper saw some slight changes due to missing some key citations and mixing of terms, e.g. I was using the terms (in)equity and (in)equality interchangeably, which is not correct. As much as I would like to measure green equity, that is beyond the scope of using proximity or count-based metrics (equality), which don't really account how nature provision actually impacts people. Furthermore, I'm using the Gini metric which is a direct measure of inequality. 
+
+After meeting with Ronita and Anil, I rewrote part of the discussion to highlight the key findings, which are (hopefully) the catch for the editors: only 0.1% of the country lives in areas where the 3-30-300 is attained, and contrary to what one would expect, deprived areas live in closer proximity to green spaces. The reason behind this could be due to several factors: (i) affluent neighbourhoods may have more private gardens and wealthier families may make use of other green spaces; (2) the quality of green spaces in rich and poor neighbourhoods is not the same, for instance, when you look at crime and health-related metrics, the relationship between the distance to park is clear, meaning that those parks in poor areas are seen as less safe and the kind of vegetation in those areas may not provide the same ecosystem services like air pollution reduction. While this is not directly measured in the paper, I think it is an important point to make because in some neighbourhoods green equity (not equality) can be improved, not by creating more spaces, but by working on making the existing ones better.
+
+## Tessera Stuff
+### Mapping Human Infrastructure in Nature Reserves
+
+Alongside Charles Emogor, we've been working on a project to map human infrastructure in nature reserves around the world using Tessera embeddings (and other GeoFMs). The original idea was to use the high-resolution embeddings to identify and classify different types of infrastructure, such as trails, buildings, and other human-made structures within protected areas. We met several times and brainstormed for a while on which datasets are available as labels. The obvious choice was OpenStreetMaps, but the first attempt we did was using Google's Open Buildings dataset. The binary classifier was pretty good, but Anil pointed out that using AI-derived data might not be the best approach. So we used Overture Maps data, filtering for only OSM-derived features, including roads, buildings and infrastructure. 
+
+As case studies, we initially wanted to use the Cross River park in Nigeria where Charles has worked in, thus has a lot of local info, but realised that the polygons we used for querying the embeddigns (World Database on Protected Areas, WDPA) did not include all the areas, so we picked the Parc National de Taï in Cotê d'Ivoire and the Nairobi National Park in Kenya.
+
+Using the same logic behind the classifier for local climate zones in my last post, I rasterised the built-up infrastructure from overture and sampled equally for all classes and trained an MLP classifier. The results are not that bad considering the limited amount of data and that it is not using spatial information. 
+
+After meeting with Anil, Sadiq and Robert Fletcher, we agreed that the best approach would be to map only roads, so Charles and I are working with using road data from OSM as well as from Sentinel to detect new roads. We are going to work with areas where new roads have been built. 
+
+A super short notebook, similar to the one in the LCZ classification project is available [here](2025-11-16-tessera_example.ipynb).
+
+### LCZ Classification
+
+This project has been dorman for a while but I found something that will be super useful. So, going back to what I had posted about it. I want to reclassify the local climate zones (LCZ) using Tessera embeddings. As labels, I was using Geoclimate and a dataset from a paper (Demuzere et al), however, the former uses data from OSM, which is incomplete for most Global South cities, so some attributes like building height are likely missing or wrong, thus the classification is not right, while the latter is an AI-derived product and that is not ideal (see comments for mapping infrastructure in nature reserves). But last week I found [SoSat2-LCZ42](https://arxiv.org/abs/1912.12171) (published by the [Data Science in Earth Observation in TUM](https://www.asg.ed.tum.de/sipeo/home/)), which is a manually labelled dataset for 42 cities around the world, including cities in Africa, Asia and South America. The dataset includes Sentinel-2 imagery and LCZ labels, with splits for training, validation and testing. That is exactly for I needed, and with this I can do a fair comparison between Tessera, AlphaEarth and other GeoFMs.
+
+### Nex PhD project
+
+So after meeting with Anil and Ronita, we discussed the next steps for my PhD after the 3-30-300. A very exciting idea came out of it and is ussing GeoFMs like Tessera for a Health Impact Assessment (HIA) of green space policies like the 3-30-300 in England. For those not familiar with HIA, it is a process that helps evaluate the potential health effects of a policy, program, or project on a population. There are multiple approaches to develop a HIA. According to [this paper](https://doi.org/10.34172/ijhpm.2023.7103), there are 7 main cateogries of methods for a HIA, including what they name AI/ML but it's mostly just regressions. Based on this and using some literature published in The Lancet suggested by Ronita (in [Philadelphia](https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(20)30058-9/fulltext) and [globally](https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(25)00053-1/fulltext)), I think the best approach is to use Tessera to fill in the gaps in the Vegetation Object Model (VOM) I used for the 3-30-300 project. As mentioned in the paper this is a LiDAR-derived model that contains only vegetation information at 1 m resolution. The data is only available for 2018-2023, but it doesn't have data for all areas and all years, in fact, some areas only have for one or two years. That's where GeoFMs come in, as they can provide the missing information for the years where VOM wasn't available. And, I can get access to mortality data for all of England from 2014 to 2024, plus access to buildings and parks for all years as well. This would give me a strong data foundation for a HIA and potentially for causal-related methods, which are very common in public health studies.
+
+Using that information, with a health-related metric like mortality for the same years, we can do a HIA of canopy cover change in English cities. Alternatively, and following similar methodologies in other papers, we could use NDVI to see the changes in greenness instead of canopy cover, which in theory it's easier but also less exciting, I would say 😅.
+
+## Website Changes
+
+I removed google analytics and cookies request from this website. I'm also changing the website to include a new tab for talks and projects where I can embedd the slides I've done with revealjs. What I'm trying to do is to publish a different repo as part of the main website. I attempted to do it during PROPL25 so that people could follow the slides live and watch them later, but my website crashed completely and 1 hour before the talk I had to revert the changes 😭. I'll probably update this over the Christmas period.
+
+[^1]: Notes in a different post
