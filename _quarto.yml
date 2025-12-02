@@ -40,7 +40,7 @@ website:
       - text: "{{< iconify academicons google-scholar-square >}}"
         href: https://scholar.google.com/citations?hl=en&user=9guCE0wAAAAJ
       - text: "{{< iconify majesticons rss >}}"
-        href: index.xml
+        href: blog.xml 
       - text: "{{< iconify fa7-solid envelope >}}"
         href: mailto:ancazugo@gmail.com
     left: >-
