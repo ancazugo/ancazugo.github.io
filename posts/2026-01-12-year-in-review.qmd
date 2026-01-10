@@ -1,0 +1,25 @@
+---
+title: 2025 in review
+date: 2026-01-12
+image: ../assets/images/projects/phd-blog/2026-01-12-year-in-review.png
+categories:
+- phd
+---
+
+Late to the party as it's already mid-January, but here's a quick review of 2025. I will mostly talk about the projects I've worked on, events I've attended and lessons learned in the process. It's nice to reflect on what I've done to have more clarity of what's coming in 2026 as it is the last full year of my PhD.
+
+First and foremost, I have to say that the thing I'm most proud of from 2025 is actually this blog. It's been so useful to keep myself accountable for my work and see my thoughts and progress written somewhere that I can come back and review later. Not only that, but some friends and colleagues have found my posts useful too. Safe to say that I will continue posting here in 2026, probably with a bit more order to keep things tidy. 
+
+I got two attend two conferences this year: BIOSPACE25 in Frascati and PROPL25 in Singapore. Not only was this the first time I visited those countries, but it was also my first time doing oral presentations, as my previous experiences were only posters. The feedback I got from both of these events were very constructive to my work, particularly for the 3-30-300 project. The highlight of BIOSPACE was the opportunity to visit ESA HQ for the first time and see what people from all over the world were working on to preserve biodiversity. On the other hand, PROPL served as the first time I presented in a CS conference, which was a very enriching experience, as many of the people I interacted with were not necessarily related to environmental sciences, so it was a great to get feedback from a different perspective.
+
+From a personal development standpoint, I feel like this is the year where things started to click for me in terms of how to approach my PhD. I think I know now how to structure better the projects both from technical and non-technical perspectives. One of the things I set myself to do was to write better code, almost as software engineers do. This led me to learn how to use different tools for writing documentation, coding efficiently and more modularly. This year I really understood tools like Sedona or Xarray or complex topics behind the Foundation Models. This just goes to highlight one of the biggest realisations of academia: iterative learning is the key to progress.
+
+I think it wouldn't be a fair recap of the year if I didn't mention stuff that didn't go as planned, because part of a PhD, and life itself, is learning from mistakes and improving the next time. At the end of the day, the goal is to fail less because that means you are learning. With that said, one year ago I set myself the goal of doing an internship during the summer, which didn't happen in the end, despite applying to three different positions. Hopefully 2026 will be different. Also, at the very end of the year, I got the 3-30-300 paper rejected from the journal my supervisors and I had planned since the beginning, so now I'm working on making the changes to get it submitted to a different journal.
+
+I want to finish this post by mentioning the things I'm really looking forward to in 2026. This is my last full year of the PhD, so I'll be looking into wrapping up the projects I've been working on with the 3-30-300 and Tessera, as well as some smaller projects I've started recently (more info in previous posts). I will also be looking into attending more conferences and do networking. One of the things I set myself to do in 2026 is to continue my learning path of SW good practices with the goal of getting ready for what comes after the PhD, so I'm very eager to finally start learning DS&A and MLOps, as those seem to be very in-demand skills in the job market.
+
+Finally, I want to share one of my favorite photos of the year for the post thumbnail 😅: For the first time in my life I got to see the national tree[^1] of Colombia in its natural habitat. The wax palm (_Ceroxylon quindiuense_) can grow up to 60 meters tall, making it the tallest palm in the world, which is impressive, but sounds even cooler when you realise that these bad boys are only found in the middle of the Andes in altitudes up to 3,000 meters above sea level. Not exactly the best place to grow a giant plant and definitely not the warm beach-like environment one would associate with a palm tree. These ones are found in the Cocora Valley (Valle del Cocora) as part of the Los Nevados National Park in the middle of the Coffee Axis, the coffee growing region of Colombia.
+
+![Wax Palms in the Cocora Valley](../assets/images/projects/phd-blog/2026-01-12-year-in-review.png)
+
+[^1]: Fun fact: palms aren't even real trees, so what are we doing here 🤣???
