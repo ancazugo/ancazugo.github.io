@@ -7,6 +7,10 @@ categories:
 - blender
 - 3d
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 This week I focused mostly on checking why I had some empty rows in the estimation of the canopy cover and the tree count from the Vegetation Object Model. After investigating the code, I found that the issue was behind a try/except clause that was masking corrupted files. Now, this was the intended behaviour originally, as some files can't be read, however, because the data processing is done at the geographic statistical level (read [ONS](https://www.ons.gov.uk/census/census2021dictionary/areatypedefinitions)), and the VOM tiles come in 5x5 km files (following GB National Grid), even when one file can't be read, the other ones wouldn't be processed either. With the new small correction, only the corrupted files are not processed and the rest of the files are processed as intended. So from the 5402 tiles, only 26 can't be read.

@@ -6,6 +6,10 @@ categories:
 - phd
 - dataviz
 - map
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 For most of last week I attended the Health Impact Assessment workshop organised by the [Public Health Modelling](https://www.mrc-epid.cam.ac.uk/research/research-areas/public-health-modelling/) Group from the MRC Epidemiology Unit in Cambridge. It was a great in-depth introduction to epidemiological modelling using mostly longitudinal data for health assessment. It is very relevant as the group focuses on the effects of urban features in different health outcomes. 

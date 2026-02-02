@@ -6,6 +6,10 @@ categories:
 - phd
 - dataviz
 - map
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 As mentioned in my previous post, I have been working on the Gini Coefficient. However, when trying to run the code at a different geographical scale, it crashed, so I decided to reformat the code into a module following software engineering practices, which has been my sole focus the past week. I realised I had written the same function in multiple scripts, making the code redundant. This resulted in the reduction of the number of files and depedencies now are more clear. I switched the python project from an entirely geopandas-based workflow to a an Apache Sedona-based one, which gives me more flexibility and efficiency. I added a couple of new features that enable the location of trees around multiple buffer for each building in England and I also calculated the euclidean distance between any building and their closest park. In addition to this, I found a workoaround to use spark in R to be able to plot my results using ggplot2, which I prefer over matplotlib, given that it uses the grammar of graphics. Not to mention the GIni Coefficient functions and many other econometric functions are easily available in R. With spark, in R I can do the analysis on the parquet files I created the previous week (I stopped using duckdb, since its analytical operations don't match sparklyr).

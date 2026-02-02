@@ -4,6 +4,10 @@ date: 2026-01-12
 image: ../assets/images/projects/phd-blog/2026-01-12-year-in-review.png
 categories:
 - phd
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2026
 ---
 
 Late to the party as it's already mid-January, but here's a quick review of 2025. I will mostly talk about the projects I've worked on, events I've attended and lessons learned in the process. It's nice to reflect on what I've done to have more clarity of what's coming in 2026 as it is the last full year of my PhD.

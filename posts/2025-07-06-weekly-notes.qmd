@@ -7,6 +7,10 @@ categories:
 - dataviz
 - d3
 - javascript
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Last week started by attending the in-person event of [Information is Beautiful's](https://informationisbeautiful.net/) author, [David McCandless](https://davidmccandless.com/) at the Royal Geographical Society, who gave a presentation on how to make data tell a story, based on his experience as a data journalist. This was the inspiration for this week's plot down below using my data. In the paper is shown differently (you'll have to read it to see it) but I thought it should be fun to explore treemaps, which I hadn't done in the past. He made extensive use of this to compare the narrative around expenditure in the army by country in raw numbers, as a proportion of GDP and as proportion of the population. My goal is to show a similar thing but in terms of trees just for now. While doing this I realised that these kinds of plots are not very common in scientific papers, and I'm not really sure why as they explain proportions quite clearly, and way better than the awful pie charts you see everywhere. This also marks my return to D3 after years of not using it, although this time with a significant help from LLMs. Below you'll find a hierarchical treemap of Regions, Local Authorities, and LSOAs according to the number of trees in each geography. This is a work in progress as you'll see that the smallest box doesn't have the right size, so a lot of debugging (go click on each box to see where in that area you can find more trees!!!)

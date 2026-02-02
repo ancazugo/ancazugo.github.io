@@ -5,6 +5,10 @@ image: ../assets/images/projects/phd-blog/2025-07-13-week.png
 categories:
 - phd
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Last week was not particularly eventful but I had two very important meetings with my supervisors regarding the 3-30-300 paper. Now I feel that the paper is 95% done. The plan for most of last week and this week has been to make the suggested changes in the manuscript for a new revision.

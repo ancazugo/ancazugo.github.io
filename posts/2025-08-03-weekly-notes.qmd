@@ -7,6 +7,10 @@ categories:
 - carto
 - map
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 After a week of slow progress in the project with nothing worth highlighting, hence the two week-hiatus in the blog, last week I made a lot of progress on the paper, with Ronita and Anil's corrections:

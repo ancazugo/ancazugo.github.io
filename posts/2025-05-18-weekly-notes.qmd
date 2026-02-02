@@ -6,6 +6,10 @@ categories:
 - phd
 - dataviz
 - streamlit
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Most of last week was spent on working on the Estates project, trying to wrap up the Python library and build a quick demo for the team to reuse. So the library and its documentation can be found [here](https://ancazugo.github.io/ucam-digital-twin/) and it takes floor plans in DWG format and converts them to a geodatabase with the building footprints and rooms. To do so, it makes use of AutoCAD and ArcGIS Pro's Python APIs, which makes the manual process of converting files much easier. Then a Streamlit demo (check below) plots the rooms and their type, as well as providing more info about usage. One interesting thing I found while working on this streamlit app is that there is a mismatch in the basemaps from Esri, Google Maps and OpenStreetMaps. It is not a big deal for 99% of cases, but in this case, when I was trying plot the floor plans against a basemap, OSM polygons were visibly south of the actual georreferenced location. And it's not related to projection as all these use Pseudo-Mercator.

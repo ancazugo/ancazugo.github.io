@@ -5,6 +5,10 @@ image: ../assets/images/projects/phd-blog/2025-06-22-week.png
 categories:
 - phd
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 After a one-week hiatus, my week started with the SDG meeting, where all Masters students presented their work. Was particularly impressed by Dr Haiman Raman's talk and attempt at simulating interviews with people on psypchiatry facilities and the perception of a healthy space. Also, worth highlighting [John Nguyen's](https://john-nguyen.com/cv/) work on acoustic surfaces.

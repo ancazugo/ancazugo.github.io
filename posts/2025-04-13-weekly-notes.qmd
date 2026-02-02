@@ -5,6 +5,10 @@ image: ../assets/images/projects/phd-blog/2025-04-13-week.png
 categories:
 - phd
 - map
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 So, I finally!!! finished refactoring the code and included the Gini Coefficient in my analysis. So now my code runs smoothly and get the metrics at different spatial levels and some metrics at the building level, including a differentiation between euclidean and manhattan distances to a public park. So I calculated the green inequality using the total number of trees, the available trees within 10, 25, 50, 75, 100 m for all buildings and the accessibility to parks at the same spatial resolution as deprivation is measured in England (image on the left shows the Gini Coefficient for the total number of trees in London; higher is more unequal).

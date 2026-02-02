@@ -4,6 +4,10 @@ date: 2025-02-21
 image: ../assets/images/projects/phd-blog/2025-02-21-week.png
 categories:
 - phd
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 So back to the routine after coming from Italy for BIOSPACE25. It was a really great experience in the ESA HQ but I got a cold from Italy 😷.

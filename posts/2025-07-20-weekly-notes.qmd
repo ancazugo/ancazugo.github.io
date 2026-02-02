@@ -5,6 +5,10 @@ image: ../assets/images/projects/phd-blog/2025-07-20-week.png
 categories:
 - phd
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Last week I had a training event with the AI4ER people on how to prepare posters and slides for academic purposes, followed by a BBQ (and the inevitable rain). I had to present my research and I got valuable feedback from Adriano Gualandi on how to properly deliver my message and present using animations, to grab people's attention. To be honest, I had rarely used animations before in my slides because I appreciate simplicity and with special effects it can get too much easily. However, with the feedback I got, I think the power of the animations relies heavily with the storytelling aspect of the presentation and how your speech is going. This was super valuable so I will be working on that over the summer because I know that I will have to present at my department's PhD conference in November.

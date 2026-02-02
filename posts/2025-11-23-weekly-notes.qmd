@@ -4,6 +4,10 @@ date: 2025-11-23
 # image: ../assets/images/projects/phd-blog/2025-11-16-week.png
 categories:
 - phd
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 ## Intro

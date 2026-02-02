@@ -6,6 +6,10 @@ interactive: false
 categories:
 - phd
 - conference
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 ## Day 2

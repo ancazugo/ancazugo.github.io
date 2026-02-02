@@ -7,6 +7,10 @@ categories:
 - carto
 - map
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 So last week I updated the results with the spatial error models and worked on the supplementary material of the paper mostly. The app to visualise all the trees is done (see below). Building it was surprisingly easier than it looked. Just let Sedona partition the data and upload that to a Google Cloud bucket, then create a table that CARTO can read and make the connection between the two. With this I realised that it is impossible to upload the tree partitions to Zenodo because there is a restriction to the number fo files, even though the 183 million trees only take 6 GB as parquet files (highly recommended format for those that still use .shp or .gpkg). Big plus from this that I actually got to play around with GCP.

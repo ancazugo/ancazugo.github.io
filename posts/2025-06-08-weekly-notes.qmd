@@ -6,6 +6,10 @@ categories:
 - phd
 - dataviz
 - map
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Two weeks smashed into one due to the annual AI4ER retreat in the Lake District and lack of good wifi 🤣: I finished the analysis of inequality using my 3-30-300, one of the obstacles was trying to account for population size when measuring a given variable in a certain geographical unit; the solution was rather simple, just normalise with the population (n/(n-1)), which roughly keeps the interpretation of Gini the same (higher values more unequal), but it leads to values that might be larger than one, due to imbalance in population size. This is actually good as I can now see two areas that might have a similar Gini Score but may have different number of inhabitants. This led to a rabbithole of trying to find the best way to represent this and I ended up using a bivariate map (see below), which will definitely be in the paper.

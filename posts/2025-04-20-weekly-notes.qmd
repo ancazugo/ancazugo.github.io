@@ -4,6 +4,10 @@ date: 2025-04-20
 image: ../assets/images/projects/phd-blog/2025-04-20-week.jpeg
 categories:
 - phd
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 I dedicated a good chunk of last week to prepare for my technical interview for the [ESL](https://eslab.ai/esl-2025), for which I read Josh Starmer's [Statquest](https://statquest.org/) books and Anil Ananthaswamy's [Why Machines Learn](https://anilananthaswamy.com/). Would highly recommend the three of them for a brush-up on the fundamentals and a bit of history of ML math.

@@ -4,6 +4,10 @@ date: 2025-05-04
 categories:
 - phd
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Last week started off with a Docker Workshop by the [Accelerate Programme for Scientific Discovery](https://github.com/acceleratescience) (APSCI). This was the only workshop run by them that I hadn't attended yet and I was really looking forward to it as my experience with Docker had been really limited and didn't understand very well how to implement it in my workflow. I would highly recommend the other workshops by them, especially the packaging and publishing one for scientific software.

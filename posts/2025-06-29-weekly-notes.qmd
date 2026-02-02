@@ -5,6 +5,10 @@ image: ../assets/images/projects/phd-blog/2025-06-29-week.png
 categories:
 - phd
 - dataviz
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2025
 ---
 
 Last week was unexpectedly devoted to sorting things out with my scholarship due to an unforeseen issue. However, I managed to finish all the sections in the 3-30-300 paper, except for the discussion which needs polishing. I added a couple of plots and rearranged the results with a story for each subsection. I'm really becoming a power user of Gemini for correcting writing style to fit an academic text. Linked below is a plot that summarises one of the points I make in the manuscript about how the 3-30-300 is reflected in population numbers.
