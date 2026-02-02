@@ -1,0 +1,30 @@
+---
+title: Catching up with stuff
+date: 2026-02-01
+image: ../assets/images/projects/phd-blog/2026-02-01-week.gif
+categories:
+- phd
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2026
+---
+
+# Introduction
+The last week was my first back in the UK, which meant that most of the week was spent reviewing where I left things in December last year. That also included doing supervision work for the Maths and programming course I was teaching in the Department of Architecture.
+
+## 3-30-300 Project
+
+As mentioned in the previous post, the paper didn't even make it to the review process so I've been working on tailoring it to fit the new journal. What this means is that I've had to tone down on certain topics like urban planning in order to make more emphasis in the environmental and natural aspect of the paper. 
+
+Although not related to the paper, I started the transition of the main module attached to the paper to a new project so it can be installed as a package. The idea is for the metrics to be calculated for a given city or region, regardless of whether they are in England or not (as the current code works). How I'm doing it is by extending the capabilities of the code to extract buildings from OSM, but also to give the user the option to provide their own building polygons. In addition to this, users would need to provide a tree dataset and a park one (which could be from OSM as well). The reason behind this work is because in the meetings with Ronita, we had discussed the possibility of doing a comparative study with cities outside the UK, and I wanted to reduce the amount of work required to do so, by standardising the existing one and turning it into a package.
+
+## Other work
+
+As part of his PhD project, my fellow SDG member [Saitabau Kumary](https://www.mastercardfoundation.fund.cam.ac.uk/staff/saitabau-kumary), is working on the built up infrastructure of Nairobi in Kenya. I am part of the project and I measured some of the spectral signature across the years that Sentinel-2 is available to see how built up areas and vegetation have changed over time (see image below). Although the urban growth is not very clear, there are some patterns of NDVI reduction. We'll likely have to narrow the analysis to a specific period in the year (e.g. rainy season) to avoid misinterpretation of the data due to seasonal variations.
+
+![Average NDVI for Nairobi between 2016 and 2025](../assets/images/projects/phd-blog/2026-02-01-week.gif)
+
+## Weekly Objectives
+- Prepare slides for SDG meeting next week
+- Finish corrections for the new version of the manuscript
