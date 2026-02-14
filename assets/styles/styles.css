@@ -1,1 +1,186 @@
-/* css styles */
+/* ===== Global Transitions ===== */
+a,
+.nav-link,
+.navbar-brand,
+.card {
+  transition: all 0.25s ease;
+}
+
+/* ===== Links ===== */
+#quarto-content a:not(.nav-link):not(.btn):not(.card-link):not(.listing-title a) {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
+}
+
+#quarto-content a:not(.nav-link):not(.btn):not(.card-link):not(.listing-title a):hover {
+  background-size: 100% 2px;
+}
+
+/* ===== Navbar ===== */
+.navbar .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(13, 148, 136, 0.1);
+}
+
+.navbar-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ===== Blog Grid Cards ===== */
+.quarto-grid-item {
+  border-radius: 1rem !important;
+  overflow: hidden;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.quarto-grid-item .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.quarto-grid-item:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.quarto-grid-item .card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.quarto-grid-item .listing-categories {
+  margin-top: 0.5rem;
+}
+
+.quarto-grid-item .listing-categories .listing-category {
+  border-radius: 2rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* ===== Hero / Homepage ===== */
+#hero-heading {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+#hero-heading a {
+  font-weight: 600;
+}
+
+.about-entity .about-link {
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-entity .about-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+}
+
+/* ===== Code Blocks ===== */
+div.sourceCode {
+  border-radius: 0.75rem;
+  border: none;
+  font-size: 0.9rem;
+}
+
+pre.sourceCode {
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+code {
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.35rem;
+}
+
+/* ===== Footer ===== */
+.nav-footer {
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+  padding-top: 1.5rem;
+}
+
+.nav-footer a {
+  opacity: 0.65;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-footer a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ===== TOC ===== */
+nav[id="TOC"] .nav-link.active {
+  border-left: 3px solid #0d9488;
+  font-weight: 600;
+}
+
+/* ===== Headings in Content ===== */
+#quarto-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+#quarto-content h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid rgba(13, 148, 136, 0.15);
+}
+
+#quarto-content h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+/* ===== Search ===== */
+.search-textbox {
+  border-radius: 2rem !important;
+}
+
+/* ===== Category Pills ===== */
+.quarto-category {
+  border-radius: 2rem;
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Post Meta ===== */
+.quarto-title-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===== Back to Top Button ===== */
+#quarto-back-to-top {
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
