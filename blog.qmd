@@ -13,6 +13,8 @@ listing:
   image-placeholder: assets/images/home.png
   fields: [image, date, title, categories, author, reading-time]
   feed:
+    type: full
+    language: en
     categories: [phd]
 ---
 

@@ -1,6 +1,8 @@
 project:
   type: website
 
+lang: en
+
 website:
   title: "Andrés C. Zúñiga-González"
   description: "PhD Student @ University of Cambridge"
@@ -51,8 +53,8 @@ website:
 format:
   html:
     theme:
-      light: lightly
-      dark: darkly
+      light: [lightly, assets/styles/light-theme.scss]
+      dark: [darkly, assets/styles/dark-theme.scss]
     css: assets/styles/styles.css
     toc: true
     grid: 
