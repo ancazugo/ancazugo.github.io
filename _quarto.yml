@@ -19,8 +19,10 @@ website:
         text: About
       - href: blog.qmd
         text: Blog
-      # - href: talks-slides/index.qmd
-      #   text: Talks
+      - href: projects.qmd
+        text: Projects
+      - href: talks.qmd
+        text: Talks
       # - href: services.qmd
       #   text: Services
   page-footer: 
@@ -53,8 +55,8 @@ website:
 format:
   html:
     theme:
-      light: [lightly, assets/styles/light-theme.scss]
-      dark: [darkly, assets/styles/dark-theme.scss]
+      light: [cosmo, assets/styles/light-theme.scss]
+      dark: [cosmo, assets/styles/dark-theme.scss]
     css: assets/styles/styles.css
     toc: true
     grid: 

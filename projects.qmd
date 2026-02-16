@@ -1,0 +1,17 @@
+---
+title: "Projects"
+comments: false
+listing:
+  contents: projects
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  page-size: 6
+  grid-columns: 3
+  image-placeholder: assets/images/home.png
+  fields: [image, title, description, categories]
+---
+
+A collection of projects I've worked on.

@@ -1,0 +1,21 @@
+---
+title: "3-30-300 Analysis in England"
+description: "Investigating green inequality in the nation using advanced spatial analysis."
+# date: 2026-01-01
+image: ../../assets/images/projects/projects/3-30-300_demo.gif
+categories:
+  - phd
+  - cambridge
+---
+
+## Overview
+
+This is one of the big projects in my PhD in which I'm doing an extensive analysis of the 3-30-300 rule in all cities in England. To accomplish this, I'm using the Vegetation Object Model (VOM) to segment indivudal trees. Then using Ordnance Survey data and Verisk Buildings, I do a (very) big data analysis of how each building and output area fares in terms of 3-30-300 metrics. There's a bunch of tools involved in this process, but the main ones are: Apache Sedona, Spark, NetworkX, and GeoPandas. Most plots in the paper were done in R. Would highly recommend reading the preprint
+
+![3-30-300 Demo](../../assets/images/projects/projects/3-30-300_demo.gif)
+
+## Links
+
+- [GitHub Repository](https://github.com/sdgresearch/3-30-300-analysis)
+- [Documentation](https://sdgresearch.github.io/3-30-300-analysis/)
+- [Preprint](https://arxiv.org/abs/2510.13861)

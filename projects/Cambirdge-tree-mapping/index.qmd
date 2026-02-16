@@ -1,0 +1,24 @@
+---
+title: "Cambridge Tree Mapping"
+description: "Using Computer Vision to map trees in Cambridge, UK."
+# date: 2025-06-15
+image: ../../assets/images/projects/projects/detectree-Cambridge.png
+categories:
+  - mres
+  - cambridge
+links:
+  - text: "GitHub"
+    icon: globe
+    href: https://github.com/ancazugo
+---
+
+## Overview
+
+As part of my MRes dissertation in the Master's in Environmental Data Science at the University of Cambridge, I used detectree2 to segment and map individual trees in Cambride, UK. I used 25 cm resolution RGB images from EDINA and manually labelled ~2000 trees. 
+
+<iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/ancazugo/cltm0dlax01bx01ph6eek4xp9.html?title=false&access_token=pk.eyJ1IjoiYW5jYXp1Z28iLCJhIjoiY2w0NHJqZngyNTBteDNmcG5iM3ZsbDQyNCJ9.6cVqIepyKP7oNzV0RqzkMA&zoomwheel=false#16.52/52.205394/0.11863" title="Cambridge Trees" style="border:none;"></iframe>
+
+## Links
+
+- [GitHub Repository](https://github.com/ancazugo/detectree2-Cambridge)
+- [Demo](https://api.mapbox.com/styles/v1/ancazugo/cltm0dlax01bx01ph6eek4xp9.html?title=view&access_token=pk.eyJ1IjoiYW5jYXp1Z28iLCJhIjoiY2w0NHJqZngyNTBteDNmcG5iM3ZsbDQyNCJ9.6cVqIepyKP7oNzV0RqzkMA&zoomwheel=true&fresh=true#16.52/52.205394/0.11863)
