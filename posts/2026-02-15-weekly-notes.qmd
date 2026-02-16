@@ -1,0 +1,48 @@
+---
+title: Weekly Notes - 2026-02-15
+date: 2026-02-15
+image: ../assets/images/projects/phd-blog/2026-02-15-week.gif
+categories:
+- phd
+- dataviz
+- llm
+license: "CC BY"
+copyright:
+    holder: "Andrés C. Zúñiga-González"
+    year: 2026
+---
+
+# Introduction
+
+This is quite a large update as it includes everything I've done for the past two weeks. I'll talk about the LCZ classification and road mapping projects as well as my first actual experience with Claude Code and a cool toy example.
+
+# LCZ Classification
+
+It turns out that getting the right labels for LCZ classes is more complicated than expected. As mentioned in previous posts, I intended to use the So2Sat LCZ42 dataset, which was manually created by the authors. They provide a helpful script to download and decompress the datarray of 320 x 320 m patches, including Sentinel-1 and 2 data. For the past two weeks I've been trying to make sense of the data and making sure that I'm following the right steps to get the labels and coordinates of the patches. I've downloaded the ~400k dataset three times to triple check that they are right but unfortunately, I think they are actually wrong, as some of the georeferencing metadata seems to be corrupted. For instance, all the patches that (I assume) belong to London, actually fall in Celtic Sea, roughly at the same latitude as London. This is easily solvable by adjusting the metadata, but the biggest issue so far is that some of the lables are not correct, not even remotely close to what you would expect. Ignoring the georeferencing problem, features are still visible in the Sentinel-2 images and some clearly urban high rise areas are mislabelled as natural areas.
+
+At the moment, I've reached out to the authors of the dataset to ask for their clarification on the labels and georeferencing. For now, I'm working with the Demuzere labels that are part of WUDAPT. And to be able to compare both Tessera and AlphaEarth at the same point in time, I've requested the Tessera embeddings for the same 42+10 cities present in the So2Sat dataset.
+
+I guess related to this, I applied to go to the Urban Climate Summer School in September in Bochum, Germany. This school apparently only takes place every 4 years so I'm crossing my fingers that I get in.
+
+# Road Mapping
+
+This week I resumed work on this project by searching what the best strategy is for categorising different features from OSM. Critically, OSM stores data in different layers: buildings are polygons that may be on the `landuse=residential` layer. This means that in order to map roads and other features, such as trees, croplands, water bodies, how to merge them is crucial. Merging them is not the hard part, but defining what belongs to what is, given the heterogeneity of OSM tags. With the help of LLMs and some initial categorisation I did with Charles, I think I've more or less defined most categories, but there will likely be and undefined label for stuff that is not captured by any of the tags/layers.
+
+# Claude Code work
+
+I feel a bit embarrassed to say that I hadn't used Claude code until a few days ago. Most of my coding was done by a combination of my input and cursor (pro version) and ChatGPT + Gemini. While this coding setup was way more efficient than just doing it on my own, I did find that when I wanted larger tasks or reforms of the code, it would become messy and hard to track. Nonetheless, a couple of days ago I attended the Claude Society workshop in the Engineering Department, where I actually "learned" how to use Claude Code and WOW!!!!
+
+First, with just two prompts I was able to do a globe with time zones using three.js. Obviously a lot can be improved, but it still is a better and faster starting point than someone learning JavaScript and three.js from scratch. First, it splitted the globe into 24 equal parts, but then I asked it to use the real time zones and where to get them. My point was to prove that the Iberian peninsula has a weird timezone, and should be the same as the UK not the Central European Time.
+
+Then, I used Claude to change the Quarto base styles for my website (as you can see if you've been here before 😉) and generate the listings and tabs for additional content in the website like Projects and talks (this last one is still a work in progress).
+
+Finally, I had this repo concept that started from the LCZ project where I wanted to make it possible to download and use in a standard way both AlphaEarth and Tessera embeddings. The idea was to use the backbone of torchgeo, which uses Pytorch lightning for easier training and inference. It was taking a long time for me to develop this from scratch, so I gave Claude my codebase, which contained functions that I had created with `xarray`, `gee`, `xee` and `geotessera` to retrieve the embeddings, store them as zarr, read them as xarray arrays and use them with Torchgeo. And Claude delivered!!!! Not without errors, of course, but I think that's where the specialist comes in, because I was able to direct the agent to the specific error, or even I would make the changes myself. So far it's working close to what I had in mind. I will report back on this next week as I'm still working on it.
+
+![Time Zones Globe](../assets/images/projects/phd-blog/2026-02-15-week.gif)
+
+# Weekly Objectives
+
+- Run multi city models for LCZ classification
+- Have a look at how to get the Embedded Seamless Data embeddings (if there's an API for that)
+- Clean code for the OSM tags to be used for road mapping
+- Ne ratez pas l'examen d'écoute de français 🇫🇷😬

@@ -21,7 +21,7 @@ website:
         text: Blog
       - href: projects.qmd
         text: Projects
-      - href: talks.qmd
+      - href: talks-slides.qmd
         text: Talks
       # - href: services.qmd
       #   text: Services
