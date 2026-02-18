@@ -1,7 +1,7 @@
 ---
 title: "3-30-300 Analysis in England"
 description: "Investigating green inequality in the nation using advanced spatial analysis."
-# date: 2026-01-01
+date: 2025-01-01
 image: ../../assets/images/projects/projects/3-30-300_demo.gif
 categories:
   - phd
