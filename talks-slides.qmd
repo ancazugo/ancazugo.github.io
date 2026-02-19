@@ -1,0 +1,17 @@
+---
+title: "Talks"
+comments: false
+listing:
+  contents: talks-slides
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  page-size: 6
+  grid-columns: 3
+  image-placeholder: assets/images/home.png
+  fields: [image, date, title, description, categories]
+---
+
+Here you can find the slides to some of the talks I've given throughout my professional career.
