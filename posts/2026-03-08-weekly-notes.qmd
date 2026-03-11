@@ -33,7 +33,7 @@ Since I want to see change in time, I used the weights from these models to do i
 
 A big shout-out to the team behind So2Sat dataset for kindly updating and correcting the georeferencing metadata for the patches. At the moment, I'm trying to do experiments with European cities, starting with London and then Paris.
 
-![Nairobi LCZs from 2017 and 2025 as predicted from AlphaEarth embeddings](../assets/images/projects/phd-blog/2026-03-08-week.png)
+![Nairobi LCZs from 2017 as predicted from AlphaEarth embeddings](../assets/images/projects/phd-blog/2026-03-08-week.png)
 
 # Other Stuff
 
