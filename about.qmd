@@ -10,15 +10,15 @@ format:
 comments: false
 ---
 
-Environmental data scientist with a passion for leveraging computational tools to address global challenges such as climate change, biodiversity loss, and urban sustainability. Currently, I am pursuing a PhD in the [Sustainable Design Group (**SDG**)](https://www.sustainabledesign.arct.cam.ac.uk/) at the University of Cambridge, where my research focuses on assessing the impacts of urban vegetation on sustainability in cities under.
+Environmental data scientist with a passion for leveraging computational tools to address global challenges such as climate change, biodiversity loss, and urban sustainability. Currently, I am pursuing a PhD in the [Sustainable Design Group (**SDG**)](https://www.sustainabledesign.arct.cam.ac.uk/) (Architecture) and the [Energy and Environment Group (**EEG**)](https://www.cst.cam.ac.uk/research/eeg) (Computer Science) at the University of Cambridge, where my research focuses on assessing the impacts of urban vegetation on sustainability in cities under.
 
 ## Research
 
-My curretn research integrates high-resolution LiDAR and aerial images of England to map trees in cities and, alongisde other geospatial datasets, assess the impact of urban vegetation in cities and its relationship to socio-economic indicators. I make heavy use of R, Python, Spark, Google Earth Engine, as well as specific tools for statistical modeling, machine learning, and data visualization.
+My current research integrates high-resolution LiDAR and aerial images of England to map trees in cities and, alongisde other geospatial datasets, assess the impact of urban vegetation in cities and its relationship to socio-economic indicators. I make heavy use of R, Python, Spark, Google Earth Engine, as well as specific tools for statistical modeling, machine learning, and data visualization.
 
 ## Background
 
-I hold a Master's in Environmental Data Science from the University of Cambridge and a Master's in Biological Sciences from Universidad de los Andes (Uniandes), where I specialized in paleoecology and ancient DNA. My research has spanned diverse areas, from characterising carbon sequestration in Colombian páramo peatbogs to analyzing how vegetation impacts urban sustainability. I did a double major in Biology and Microbiology in Uniandes.
+I hold a Master's in Environmental Data Science from the University of Cambridge and a Master's in Biological Sciences from Universidad de los Andes (Uniandes), where I specialized in paleoecology and ancient DNA. My research has spanned diverse areas, from characterising carbon sequestration in Colombian páramo peatbogs to analyzing how vegetation impacts urban sustainability. I did a double major in Biology and Microbiology in Uniandes with a minor in Geography.
 
 In addition, I worked for a real estate company in Colombian extracting data from different market places, developing machine learning models for client classification and price prediction for several cities in Colombia.
 
@@ -27,9 +27,9 @@ In addition, I worked for a real estate company in Colombian extracting data fro
 I am proficient in **R**, **Python**, **Java**, **JavaScript**, **SQL**, and **LaTeX**, with extensive experience in:
 
 - **Geospatial Tools**: ArcGIS, QGIS, Google Earth Engine
-- **Data Visualization**: D3.js, Observable, R Shiny
+- **Data Visualization**: D3.js, Observable
 - **Data Engineering**: Spark, Docker, AWS
-- **Machine Learning**: TensorFlow, Pytorch,scikit-learn
+- **Machine Learning**: Pytorch, scikit-learn
 
 ## Teaching & Mentoring
 
