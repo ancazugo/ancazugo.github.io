@@ -1,0 +1,56 @@
+---
+title: Weekly Notes - 2026-03-29
+date: 2026-03-29
+categories:
+- phd
+---
+
+# Introduction
+
+This is mostly an update on the literature review I've been doing for the LCZ classification project I've been working on plus an initial update from the Anglesey project in Architecture.
+
+## LCZ Classification
+
+I want to summarize what I've read so far about LCZ classification papers. So, LCZ classes were established in [2012 by Stewart and Oke](https://journals.ametsoc.org/view/journals/bams/93/12/bams-d-11-00019.1.xml) and they have been used largely by the urban climate community ever since. The methods to create LCZ for a given city vary widely depending on available data ([Huang, 2023](https://www.sciencedirect.com/science/article/pii/S0034425723001244)). There are three main types of methods:
+1. Remote sensing-based methods
+2. GIS-based methods
+3. Hybrid methods
+
+Each one of this has their own advantages. For instance, RS models can be extrapolated to many areas due to the availability of data but not all sensors have the same resolution so that might hinder definition of classes. GIS methods can enjoy from greater resolution but rely on the quality of local data, like building footprints and height. Hybrid methods are a combination of both but are not that common in the literature.
+
+Among RS-methods, which is what I'm working on at the moment, there are three main approaches:
+1. Pixel-based methods
+2. Scene-based methods
+3. Patch-based methods
+
+The most common approach is the pixel-based ones, particularly using Landsat data, because of two main reason: thermal information and resolution. Scene-based are considered object-based approaches and patch-based are like image classification problems where an entire patch is classified as a single class.
+
+Now, the standard LCZ unit is a big topic of discussion in the literature as it depends largely on the type of method and data used for that. The standard size in most papers to define a LCZ is 100x100 m, particularly in RS-based papers, but 300x300 m is also common. However, in GIS-based papers, census units or neighbourhoods are used as well.
+
+Most literature about LCZ classification using RS datasets uses a combination of Sentinel-1 and 2 and Landsat data. This is in part because the only available dataset with global coverage is the [So2Sat LCZ42 dataset](https://arxiv.org/abs/1912.12171) for ML purposes. All papers that use this dataset could be considered in the patch-based approach. Howver, I found there are a couple of large-scale benchmark datasets for China and South Korea.
+
+In general, the papers that I've encountered had a good discrimination between built (1-10) and natural classes (A-G) but models seem to struggle when identifying similar classes, particularly those that depend on height and density of buildings. One paper that caught my attention, on top of doing a general model for the 17 classes, created a separate model for classes 6 and 9 and for classes C and D ([Liu, 2025](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10990281&ref=&tag=1)).
+
+Crucially, the only global LCZ dataset is the Demuzere 2022 one that I've referenced in the past. They use 46 different bands from various sources to classify the 17 classes. These include: Landsat 8, Sentinel-1 and 2, PALSAR, VIIRS, + DEM (from MERIT), DSM (ALOS) and a global canopy height model. They also argue that using anthropogenic heat flux is key to determining built classes. To determine the labels they use a curated list of labels from WUDAPT. 
+
+Of importance from these papers is why LCZs are so important: even though they were created using cities in Europe in mind, they have extended globally and the community has proven their usefulness in spite of regional climatic context. Moreover, these LCZ classes are used as a base for urban weather simulations as Urban Canopy Parameters (UCP), so getting a higher resolution (well, not higher but more precise) would improve local climate models. In addition, in Liu, et al. (2025) they demonstrated that LCZ classification is of great significance for studying the cooling effect of green infrastructure and the impact on the microclimate around towns.
+
+### Deep learning based methods
+
+Following discussions with Anil and Sadiq, I was advised to use semi supervised methods to train the classifier, so I've been reading the blog posts from [Lilian Weng](https://lilianweng.github.io/posts/2021-12-05-semi-supervised/) about implementations and theory behind them. Sadiq suggested label propagation is probably the way to go, so after reading that I wanted to see if there were papers using similar approaches and this is what I found as part of the literature review.
+
+While the Demuzere, 2022 dataset uses random forest, most recent literature uses a mix of CNNs and Transformers. I will talk mostly about papers that use the So2Sat LCZ42 dataset.
+
+- [Lin, et al. (2024)](https://ieeexplore.ieee.org/abstract/document/10526364) uses transformers and semi-supervised learning. The way they do it is via a teacher model that will create the pseudo labels that the student will use alongside the real labels to get a better model. They benchmarked the model against the So2Sat LCZ42 as well as the CHN15-LCZ and SouthKorea6-LCZ datasets. They mention that the patch labels are crucial for training and thye think it's better if images are larger than the 320x320 m size of the So2Sat LCZ42 dataset, which they note is noisy because the were labeled by experts using an entire Sentinel-1 and 2 scene, not just the patch, so contextual information is important for determining the labels. They mention that classes whose difference is height are hard to classify. Receptive field is something to be considered in my models.
+
+- [Liu, et al. (2025)](https://ieeexplore.ieee.org/abstract/document/10990281) uses a standalone CNN-based architecture. I found this very clear on their approach. It's interesting to see that they used and Overall accuracy for built and natural types separately, compared to the rest that use a general one. They used a Milan dataset to test the model but that raises the question of the different methodologies to determine an LCZ, using a different dataset might result in class mismatch just because of the different methodology, which is not an error in the model. As mentioned before, they use separate models for classes 6 and 9 and for classes C and D.
+
+- [Nanni, et al. (2025)](https://www.mdpi.com/1999-4893/18/10/657) uses a combination of CNN architectures including ResNet50 (RN), MobileNetV2 (MN), and DenseNet201 (DN). I found this paper a bit confusing because they used pretrained models and did a randomized selection of Sentinel 1 and 2 bands to train the 3-channel architectures. I feel like you will lose a lot of information that way. They mentioned something that I missed from the So2Sat paper, agreement between human labelers is 85% which shows how difficult it is even to experts to agree on the labels.They sued an ensemble of those models and their results seem to outperform other models.
+
+- [Nawaz, et al. (2025)](https://www.mdpi.com/2072-4292/17/8/1335) uses self-supervised learning in an attention-based model. They used only Sentinel-1 and 2 data in a three branch model. They say that in this particular problem using negative samples is not ideal because there is a big overlap between classes so what they do is use few positive samples and train the model on them and the finetuning using the So2Sat dataset. I'm still not sure how they avoid data leakage in this process, but I will need to review the methods in more detail. 
+
+## Other stuff
+
+Related to the LCZ project, I was admitted to the urban climate summer school in Bochum, Germany in September. This is a great chance to meet people who are working on similar problems and showcase my work. Hopefully I will have something more tangible by then.
+
+I started working on the Anglesey fens project where they want to evaluate vegetation health of the fenlands using remote sensing and drone imagery. I started by gathering all information available in open platforms and created a data source. Using the code I've developed for accessing GEE data in Python and using them as xarrays, I've developed pilot evaluations of NDVI around the fenlands. There are aerial images from 2013, 2015, 2018 and 2021 but unfortunately they don't include Infrared bands, so no NDVI can be calculated. What I'm gonna work on now using CLAUDE is to convert the 3-30-300 project into a package that can be used for a smaller region using similar datasets (buildings, trees, parks and roads). For this purpose, I need to create the Vegetation Object Model (VOM) from scratch using the DSM and DTM from Wales, as Defra's dataset only covers England (thus the reason why I only worked in English counties in the 3-30-300 paper).
