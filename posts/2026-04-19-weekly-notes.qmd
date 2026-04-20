@@ -41,9 +41,9 @@ In this approach, I clipped the embeddings to the extent of each patch which, if
 Augmenting the number of labels from other cities improves the model significantly, as expected. Now, I get water patches in Nairobi because the model learned what water looks like in the embeddings in European cities (see [previous post](2026-03-08-weekly-notes.qmd) for an earlier prediction of Nairobi's LCZs). AlphaEarth slightly outperforms TESSERA in semantic segmentation but TESSERA is better in patch classification.
 Inference in other cities is a bit tricky. I tried inference of a big model trained on South American cities plus London and Nairobi, but Bogotá and Buenos Aires were very wrong, even if the model learned class distributions from cities that are expected to be similar (i.e. Santiago, Sao Paulo and Rio de Janeiro).
 
-For reference, this is what the current global LCZ map looks like for Nairobi (same color palette as the other maps), so I think we are on the right track because there's more detail in the built classes in the urban areas. See the yellow areas (lightweight lowrise) in my predictions which are most likely slums, and are not detected as such in the global map.
+For reference, this is what the current global LCZ map looks like for Nairobi (same color palette as the other maps), how Nairobi is and the labels from the So2Sat dataset, so I think we are on the right track because there's more detail in the built classes in the urban areas. See the yellow areas (lightweight lowrise) in my predictions which are most likely slums, and are not detected as such in the global map.
 
-![Global LCZ map for Nairobi](../assets/images/projects/phd-blog/2026-04-19-week-3.png){width=50% fig-align="center"}
+![LCZ (Demuzere et al., 2022), Google Imagery and So2Sat labels for Nairobi](../assets/images/projects/phd-blog/2026-04-19-week-3.png)
 
 I compared this for London and Paris, the other cities I used in the training, and my predictions look very similar to the global map, so I feel like the end result of this project will be more accurate (and valuable) for underrepresented cities like Nairobi, or as often happens in research, most of the Global South.
 

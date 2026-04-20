@@ -1,6 +1,7 @@
 ---
 title: "Blog"
 comments: false
+include-after-body: assets/js/blog-pagination.html
 listing:
   contents: posts
   sort: "date desc"

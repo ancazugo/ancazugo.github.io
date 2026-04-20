@@ -7,3 +7,6 @@ copyright:
   holder: "Andrés C. Zúñiga-González"
   year: 2025
 lang: en
+format:
+  html:
+    include-after-body: ../assets/js/post-nav.html
