@@ -1,7 +1,7 @@
 ---
 title: Weekly Updates - 2026-06-28
 date: 2026-06-28
-image: ../assets/images/projects/phd-blog/2026-06-28-week.jpg
+image: ../assets/images/projects/phd-blog/lcz_nairobi_best_grid.png
 categories:
 - phd
 ---
@@ -10,7 +10,7 @@ categories:
 
 This is BIG update on the Local Climate Zones (LCZ) classification problem. I will talk about different patch classification methods I've used and the results I've got so far. 
 
-TLDR: Tessera v1.1 outperforms heavily other foundation models. My best result so far with a simple model is 0.61 Kappa Score for the So2Sat labels. More complex models increase it to 0.65. 
+TLDR: Tessera v1.1 outperforms other foundation models. My best result so far with a ResNet model is 0.62 Kappa Score and 0.65 accuracy for the So2Sat labels.
 
 ## Embedding changes
 
@@ -22,7 +22,7 @@ Finally, I adapted the code to include the [Embedded Seamless Data (ESD)](https:
 
 ## Current benchmark
 
-As I've said in previous iterations of the blog regarding this project, Local Climate Zones are by defined by 3 main factors: (i) land cover (LC) (i.e. built-up or natural), (ii) density of the LC (i.e. forest or downtown), and (iii) height of the LC (i.e. low-rise or high-rise). There are 17 classes in total. The so2sat dataset is the only global dataset that has been manually labeled and is the one most papers use to test their models. In general, the papers use the overall accuracy and the kappa score to measure their performance. Most papers use the raw Sentinel 1 and 2 data with a combination of different architectures for image classification, such as transformers, resnets, densenets, etc. Currently, the best result from a paper is an accuracy of 0.73 and 0.74 from [Zhong et al 2025]() and [Lin et al 2024](), respectively. Zhong et al 2025 uses Prior Knowledge Coupling to resolve for similar classes, such as class 6 and 9, while Lin et al 2024 uses semisupervised learning on the So2sat dataset.
+As I've said in previous iterations of the blog regarding this project, Local Climate Zones are by defined by 3 main factors: (i) land cover (LC) (i.e. built-up or natural), (ii) density of the LC (i.e. forest or downtown), and (iii) height of the LC (i.e. low-rise or high-rise). There are 17 classes in total. The so2sat dataset is the only global dataset that has been manually labeled and is the one most papers use to test their models. In general, the papers use the overall accuracy and the kappa score to measure their performance. Most papers use the raw Sentinel 1 and 2 data with a combination of different architectures for image classification, such as transformers, resnets, densenets, etc. Currently, the best result from a paper is an accuracy of 0.73 and 0.74 from [Zhong et al 2024](https://ieeexplore.ieee.org/abstract/document/10417829?casa_token=u3bOFOmejIkAAAAA:dlNUs6I0Y_8k00EJQNQNOagysi0JQarNfkC0Is8JOXz5cKvhr6wob1r4lMcW2-TlQvvVLYxE) and [Lin et al 2024](https://ieeexplore.ieee.org/document/10526364), respectively. Zhong et al 2025 uses Prior Knowledge Coupling to resolve for similar classes, such as class 6 and 9, while Lin et al 2024 uses semisupervised learning on the So2sat dataset.
 
 ## Dataset split
 
@@ -30,7 +30,7 @@ A few things to note about the So2Sat dataset that are relevant from now onwards
 This split creates some problems because high-rise buildings don't look the same in London and Nairobi, regardless of the type of model. For this reason, I created a per-city grid split, following the solar grid tessera example by Sadiq. This split is called the **grid split** and uses data from all the 52 cities where the patches are located. Nonetheless, any model with this split is not directly comparable to the cultural split from my models, or from any of the papers, as the data distribution is different.
 
 ## Models
-As readers have probably guessed, and as I mentioned before, the LCZ model from almost all papers is treated as an image classification problem. The reason for that is that by definition LCZs are defined by several features simultaneously, so it is not rare that in Urban Climate papers, LCZs are even defined at the neighbourhood or block level, which is way coarser than the resolution of Sentinel or Landsat products, thus the embeddings. A reflection of this is the 320x320 m resolution of the So2sat patches, which is even bigger than what the [Demuzere et al 2022]() dataset uses (100x100 m). In practice, this means that a pixel in a park can be a tree but if it's between many buildings and roads, it wouldn't count as one fo the natural classes but as one of the built-up classes. This is why the LCZ classification problem is treated as an image classification problem, and not a pixel-wise classification problem.
+As readers have probably guessed, and as I mentioned before, the LCZ model from almost all papers is treated as an image classification problem. The reason for that is that by definition LCZs are defined by several features simultaneously, so it is not rare that in Urban Climate papers, LCZs are even defined at the neighbourhood or block level, which is way coarser than the resolution of Sentinel or Landsat products, thus the embeddings. A reflection of this is the 320x320 m resolution of the So2sat patches, which is even bigger than what the [Demuzere et al 2022](https://essd.copernicus.org/articles/14/3835/2022/) dataset uses (100x100 m). In practice, this means that a pixel in a park can be a tree but if it's between many buildings and roads, it wouldn't count as one fo the natural classes but as one of the built-up classes. This is why the LCZ classification problem is treated as an image classification problem, and not a pixel-wise classification problem.
 
 With that said, I've been using the `timm` library to access different architectures. Most of the 150 mruns I've done in the past few weeks have been using the ResNet family of models, but I've also tested DenseNet, EfficientNet, and ConvNeXt. Following the same template of the U-Net architecture, I have labelled the different architectures by the number of parameters, so nano resnet is in reality a ResNet18, while the large resnet is a ResNet152. The same goes for the other architectures.
 
