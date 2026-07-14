@@ -1,6 +1,7 @@
 ---
 title: Weekly Updates - 2026-06-28
 date: 2026-06-28
+description: "A big update on the Local Climate Zones (LCZ) classification problem: comparing patch-classification methods and foundation models, where Tessera v1.1 outperforms alternatives (0.62 Kappa, 0.65 accuracy on So2Sat labels)."
 image: ../assets/images/projects/phd-blog/lcz_nairobi_best_grid.png
 categories:
 - phd

@@ -16,6 +16,7 @@ listing:
   feed:
     type: full
     language: en
+    items: 200
     categories: [phd]
 ---
 

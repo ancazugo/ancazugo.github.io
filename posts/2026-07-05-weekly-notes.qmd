@@ -1,6 +1,7 @@
 ---
 title: Weekly Updates - 2026-07-05
 date: 2026-07-05
+description: "Recap of the 3-30-300 greening project, responses to reviewer comments on the England paper, and progress on a Python package built from the project's code."
 image: ../assets/images/projects/phd-blog/2026-07-05-week.jpeg
 categories:
 - phd

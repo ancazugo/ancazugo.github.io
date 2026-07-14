@@ -7,6 +7,10 @@ copyright:
   holder: "Andrés C. Zúñiga-González"
   year: 2025
 lang: en
+google-scholar: true
+citation:
+  type: post-weblog
+  container-title: "Andrés C. Zúñiga-González"
 format:
   html:
     include-after-body: ../assets/js/post-nav.html
