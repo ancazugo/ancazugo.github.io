@@ -19,3 +19,12 @@ This is one of the big projects in my PhD in which I'm doing an extensive analys
 - [GitHub Repository](https://github.com/sdgresearch/3-30-300-analysis)
 - [Documentation](https://sdgresearch.github.io/3-30-300-analysis/)
 - [Preprint](https://arxiv.org/abs/2510.13861)
+
+## Poster
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+  <iframe
+    src="../../assets/projects/Poster 3-30-300 Singapore.pdf"
+    style="position: absolute; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>

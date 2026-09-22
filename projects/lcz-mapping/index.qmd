@@ -1,0 +1,22 @@
+---
+title: "Local Climate Zone Classification"
+description: "Mapping LCZs Globally with Geospatial Foundation Models."
+date: 2026-01-01
+image: ../../assets/images/projects/projects/lcz_classification_map.png
+categories:
+  - phd
+  - cambridge
+---
+
+## Overview
+
+This is the second big project in my PhD in which I'm doing remapping the Local Climate Zones (LCZs) globally. To do this, I'm using Geospatial Foundation Models (GFMs), particularly Cambridge's Tessera and Google's AlphaEarth. The goal is to create a more accurate representation of the LCZs around the world, as these classes are very useful in urban climate research. The project involves a lot of data processing and analysis, but the main tech stack is Python and stadard libraries such as (rio)xarray, geopandas, and rasterio, as well as PyTorch and timm for the deep learning part. The project is still ongoing, but you can see some of the preliminary results in the poster below.
+
+## Poster
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+  <iframe
+    src="../../assets/projects/Poster LCZ Bochum.pdf"
+    style="position: absolute; width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
